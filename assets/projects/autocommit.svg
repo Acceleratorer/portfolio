@@ -1,0 +1,19 @@
+<svg width="960" height="540" viewBox="0 0 960 540" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="540" rx="24" fill="#080A14"/>
+  <rect x="94" y="70" width="772" height="400" rx="28" fill="white" opacity="0.06" stroke="white" stroke-opacity="0.14"/>
+  <g transform="translate(146 132)">
+    <g fill="#22C55E">
+      <rect x="0" y="0" width="26" height="26" rx="7" opacity="0.22"/><rect x="36" y="0" width="26" height="26" rx="7" opacity="0.35"/><rect x="72" y="0" width="26" height="26" rx="7" opacity="0.7"/><rect x="108" y="0" width="26" height="26" rx="7" opacity="0.18"/>
+      <rect x="0" y="38" width="26" height="26" rx="7" opacity="0.45"/><rect x="36" y="38" width="26" height="26" rx="7" opacity="0.85"/><rect x="72" y="38" width="26" height="26" rx="7" opacity="0.25"/><rect x="108" y="38" width="26" height="26" rx="7" opacity="0.55"/>
+      <rect x="0" y="76" width="26" height="26" rx="7" opacity="0.9"/><rect x="36" y="76" width="26" height="26" rx="7" opacity="0.3"/><rect x="72" y="76" width="26" height="26" rx="7" opacity="0.65"/><rect x="108" y="76" width="26" height="26" rx="7" opacity="0.2"/>
+      <rect x="0" y="114" width="26" height="26" rx="7" opacity="0.25"/><rect x="36" y="114" width="26" height="26" rx="7" opacity="0.5"/><rect x="72" y="114" width="26" height="26" rx="7" opacity="0.8"/><rect x="108" y="114" width="26" height="26" rx="7" opacity="0.4"/>
+    </g>
+  </g>
+  <rect x="364" y="128" width="370" height="36" rx="18" fill="#8B5CF6" opacity="0.7"/>
+  <rect x="364" y="194" width="300" height="26" rx="13" fill="white" opacity="0.45"/>
+  <rect x="364" y="244" width="360" height="26" rx="13" fill="white" opacity="0.34"/>
+  <rect x="364" y="294" width="250" height="26" rx="13" fill="white" opacity="0.28"/>
+  <path d="M694 344L760 410" stroke="#22D3EE" stroke-width="11" stroke-linecap="round"/>
+  <path d="M760 344L694 410" stroke="#22D3EE" stroke-width="11" stroke-linecap="round"/>
+  <text x="130" y="430" fill="white" font-family="Inter, Arial" font-size="34" font-weight="900">AutoCommit Heatmap Wizard</text>
+</svg>

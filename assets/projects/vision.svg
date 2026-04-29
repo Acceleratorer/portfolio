@@ -1,0 +1,11 @@
+<svg width="960" height="540" viewBox="0 0 960 540" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="540" rx="24" fill="#08111F"/>
+  <circle cx="480" cy="250" r="170" stroke="#22D3EE" stroke-width="3" opacity="0.4"/>
+  <circle cx="480" cy="250" r="110" stroke="#8B5CF6" stroke-width="3" opacity="0.55"/>
+  <circle cx="430" cy="230" r="24" fill="#22D3EE"/>
+  <circle cx="530" cy="230" r="24" fill="#22D3EE"/>
+  <path d="M398 322C438 358 520 358 562 322" stroke="white" stroke-width="10" stroke-linecap="round" opacity="0.85"/>
+  <path d="M250 150L320 210M710 150L640 210M250 370L320 315M710 370L640 315" stroke="#F97316" stroke-width="6" stroke-linecap="round" opacity="0.75"/>
+  <rect x="70" y="70" width="820" height="400" rx="28" stroke="white" stroke-opacity="0.13" fill="white" fill-opacity="0.04"/>
+  <text x="86" y="438" fill="white" font-family="Inter, Arial" font-size="34" font-weight="900">Doomscrolling Detection</text>
+</svg>

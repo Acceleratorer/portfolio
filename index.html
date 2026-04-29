@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Tan Le / Accelra portfolio — Computer Science student, AI Engineer, Data Scientist, and builder." />
+  <meta name="theme-color" content="#7c3aed" />
+  <meta property="og:title" content="Tan Le — Accelra Portfolio" />
+  <meta property="og:description" content="AI, Data Science, MLOps, Web, and competitive programming projects." />
+  <meta property="og:image" content="./assets/og-cover.svg" />
+  <title>Tan Le — Accelra </title>
+
+  <link rel="icon" type="image/svg+xml" href="./assets/icons/favicon.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="brand" href="#home" aria-label="Back to home">
+        <img class="brand-logo" src="./assets/icons/logo.png" alt="Tan Le logo">
+        <span class="brand-text">TAN LE</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-menu">
+        <li><a class="nav-link" href="#home">Home</a></li>
+        <li><a class="nav-link" href="#about">About</a></li>
+        <li><a class="nav-link" href="#skills">Skills</a></li>
+        <li><a class="nav-link" href="#projects">Projects</a></li>
+        <li><a class="nav-link" href="#proof">Proof</a></li>
+        <li><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" type="button" aria-label="Toggle light mode">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <a class="nav-cta" href="#contact">Hire me</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero section-shell">
+      <div class="hero-orb hero-orb-one" aria-hidden="true"></div>
+      <div class="hero-orb hero-orb-two" aria-hidden="true"></div>
+
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <div class="eyebrow">
+            <span class="status-dot"></span>
+            Computer Science @ UIT · Open to AI/Data internships
+          </div>
+
+          <h1>
+            I’m <span>Accelra</span> <br> I build AI systems that feel fast, useful, and human.
+          </h1>
+
+          <p class="hero-subtitle">
+            <span id="typing-role" aria-live="polite">AI Engineer</span>
+            <span class="typing-caret" aria-hidden="true">|</span>
+          </p>
+
+          <p class="hero-description">
+            I work across machine learning, data pipelines, MLOps, web engineering, and competitive programming — turning experiments into portfolio-ready products.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects">
+              <i class="fa-solid fa-rocket"></i>
+              View projects
+            </a>
+            <a class="button button-secondary" href="./assets/cv/Tan-Le-CV.txt" download>
+              <i class="fa-solid fa-file-arrow-down"></i>
+              Download CV
+            </a>
+          </div>
+
+          <div class="hero-meta" aria-label="Quick links">
+            <a href="https://github.com/Acceleratorer" target="_blank" rel="noreferrer">
+              <i class="fa-brands fa-github"></i> GitHub
+            </a>
+            <a href="https://www.kaggle.com/accelra" target="_blank" rel="noreferrer">
+              <i class="fa-brands fa-kaggle"></i> Kaggle
+            </a>
+            <a href="https://www.linkedin.com/in/tan-le-accel77/" target="_blank" rel="noreferrer">
+              <i class="fa-brands fa-linkedin"></i> LinkedIn
+            </a>
+          </div>
+        </div>
+
+        <aside class="hero-card reveal" aria-label="Profile summary card">
+          <div class="profile-card">
+            <div class="profile-topline">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+              <span class="terminal-title">accelra.dev</span>
+            </div>
+
+            <div class="profile-avatar" aria-label="Tan Le avatar">
+              <img src="./assets/icons/avatar.jpg" alt="Portrait of Tan Le">
+              <div class="orbit orbit-one"></div>
+              <div class="orbit orbit-two"></div>
+            </div>
+
+            <div class="code-card" aria-label="Developer profile JSON">
+<pre><code>{
+  "name": "Tan Le",
+  "alias": "Accelra",
+  "focus": ["AI", "Data", "MLOps"],
+  "stack": ["React", "Node.js", "Python", "SQL" ],
+  "mode": "build → learn → ship"
+}</code></pre>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <div class="tech-marquee" aria-label="Main technology stack">
+        <div class="tech-track">
+          <span><i class="fa-brands fa-react"></i> React.js</span>
+          <span><i class="fa-solid fa-n"></i> Next.js</span>
+          <span><i class="fa-brands fa-node-js"></i> Node.js</span>
+          <span><i class="fa-solid fa-wind"></i> Tailwind CSS</span>
+          <span><i class="fa-brands fa-python"></i> Python</span>
+          <span><i class="fa-solid fa-brain"></i> Machine Learning</span>
+          <span><i class="fa-solid fa-database"></i> SQL</span>
+          <span><i class="fa-brands fa-docker"></i> Docker</span>
+          <span><i class="fa-brands fa-react"></i> React.js</span>
+          <span><i class="fa-solid fa-n"></i> Next.js</span>
+          <span><i class="fa-brands fa-node-js"></i> Node.js</span>
+          <span><i class="fa-solid fa-wind"></i> Tailwind CSS</span>
+          <span><i class="fa-brands fa-python"></i> Python</span>
+          <span><i class="fa-solid fa-brain"></i> Machine Learning</span>
+          <span><i class="fa-solid fa-database"></i> SQL</span>
+          <span><i class="fa-brands fa-docker"></i> Docker</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about section-shell">
+      <div class="container split-grid">
+        <div class="section-heading reveal">
+          <p class="eyebrow">About</p>
+          <h2>Builder mindset, AI direction, engineering discipline.</h2>
+        </div>
+
+        <div class="about-content reveal">
+          <p>
+            I’m a Computer Science student at UIT who enjoys learning by rebuilding real systems: AI demos, data workflows, automation tools, backend logic, and clean portfolio interfaces.
+          </p>
+          <p>
+            My strongest direction is AI/Data Science, but I keep a full-stack toolkit so I can ship projects end-to-end: model, backend, UI, deployment, and documentation.
+          </p>
+
+          <div class="about-pill-grid">
+            <span>AI Engineer</span>
+            <span>Data Scientist</span>
+            <span>MLOps Learner</span>
+            <span>Competitive Programmer</span>
+            <span>GitHub Builder</span>
+            <span>Product-minded Dev</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="skills section-shell">
+      <div class="container">
+        <div class="section-heading reveal center-heading">
+          <p class="eyebrow">Skills</p>
+          <h2>Focused stack, colorful enough to remember.</h2>
+          <p class="section-description">Filter by area. Some tools belong to more than one category because real projects do not stay in neat boxes.</p>
+        </div>
+
+        <div class="filter-row reveal" role="tablist" aria-label="Skill filters">
+          <button class="filter-btn active" data-filter="all" type="button">All</button>
+          <button class="filter-btn" data-filter="frontend" type="button">Frontend</button>
+          <button class="filter-btn" data-filter="backend" type="button">Backend</button>
+          <button class="filter-btn" data-filter="ai" type="button">AI/ML</button>
+          <button class="filter-btn" data-filter="data" type="button">Data</button>
+          <button class="filter-btn" data-filter="tools" type="button">Tools</button>
+        </div>
+
+        <div class="skills-grid reveal">
+          <article class="skill-card" data-categories="frontend" data-accent="#61dafb">
+            <i class="fa-brands fa-react"></i><span>React.js</span><small>UI systems</small>
+          </article>
+          <article class="skill-card" data-categories="frontend backend" data-accent="#ffffff">
+            <i class="fa-solid fa-n"></i><span>Next.js</span><small>Full-stack web</small>
+          </article>
+          <article class="skill-card" data-categories="frontend" data-accent="#38bdf8">
+            <i class="fa-solid fa-wind"></i><span>Tailwind CSS</span><small>Fast styling</small>
+          </article>
+          <article class="skill-card" data-categories="frontend" data-accent="#f7df1e">
+            <i class="fa-brands fa-js"></i><span>JavaScript</span><small>Interactions</small>
+          </article>
+          <article class="skill-card" data-categories="backend" data-accent="#3c873a">
+            <i class="fa-brands fa-node-js"></i><span>Node.js</span><small>APIs</small>
+          </article>
+          <article class="skill-card" data-categories="backend tools" data-accent="#2496ed">
+            <i class="fa-brands fa-docker"></i><span>Docker</span><small>Deployment</small>
+          </article>
+          <article class="skill-card" data-categories="ai data backend" data-accent="#3776ab">
+            <i class="fa-brands fa-python"></i><span>Python</span><small>ML + scripts</small>
+          </article>
+          <article class="skill-card" data-categories="ai" data-accent="#ee4c2c">
+            <i class="fa-solid fa-fire"></i><span>PyTorch</span><small>Deep learning</small>
+          </article>
+          <article class="skill-card" data-categories="ai" data-accent="#ff6f00">
+            <i class="fa-solid fa-microchip"></i><span>TensorFlow</span><small>ML models</small>
+          </article>
+          <article class="skill-card" data-categories="data" data-accent="#150458">
+            <i class="fa-solid fa-table"></i><span>Pandas</span><small>Data wrangling</small>
+          </article>
+          <article class="skill-card" data-categories="data" data-accent="#4dabf7">
+            <i class="fa-solid fa-chart-line"></i><span>Matplotlib</span><small>Visualization</small>
+          </article>
+          <article class="skill-card" data-categories="data backend" data-accent="#336791">
+            <i class="fa-solid fa-database"></i><span>PostgreSQL</span><small>SQL design</small>
+          </article>
+          <article class="skill-card" data-categories="tools" data-accent="#f05032">
+            <i class="fa-brands fa-git-alt"></i><span>Git</span><small>Version control</small>
+          </article>
+          <article class="skill-card" data-categories="tools" data-accent="#ffffff">
+            <i class="fa-brands fa-github"></i><span>GitHub</span><small>Open source</small>
+          </article>
+          <article class="skill-card" data-categories="tools data" data-accent="#f37626">
+            <i class="fa-solid fa-book-open"></i><span>Jupyter</span><small>Research notebooks</small>
+          </article>
+          <article class="skill-card" data-categories="backend data" data-accent="#00599c">
+            <i class="fa-solid fa-code"></i><span>C++</span><small>Algorithms</small>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="projects section-shell">
+      <div class="container">
+        <div class="section-heading reveal center-heading">
+          <p class="eyebrow">Projects</p>
+          <h2> Projects that tells my story.</h2>
+          <p class="section-description">Realistic project cards aligned with AI/Data, UIT, GitHub, and competitive programming.</p>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card reveal">
+            <img src="./assets/projects/ai-uit.svg" alt="AI-UIT project preview" loading="lazy" />
+            <div class="project-body">
+              <div class="project-head">
+                <h3>AI-UIT Problem Hub</h3>
+                <span class="project-status">Featured</span>
+              </div>
+              <p>A curated repository for UIT AI problems, solutions, experiments, and learning notes — built to become a long-term academic portfolio asset.</p>
+              <div class="tag-row">
+                <span>Python</span><span>Markdown</span><span>Algorithms</span><span>AI</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/Acceleratorer" target="_blank" rel="noreferrer">GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <img src="./assets/projects/vision.svg" alt="Computer vision project preview" loading="lazy" />
+            <div class="project-body">
+              <div class="project-head">
+                <h3>Doomscrolling Detection</h3>
+                <span class="project-status">Computer Vision</span>
+              </div>
+              <p>Face mesh, eye tracking, and interaction signals using OpenCV + MediaPipe to detect fatigue-like patterns and trigger playful interventions.</p>
+              <div class="tag-row">
+                <span>OpenCV</span><span>MediaPipe</span><span>Python</span><span>CV</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/Acceleratorer" target="_blank" rel="noreferrer">GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <img src="./assets/projects/discord-bot.svg" alt="Discord bot project preview" loading="lazy" />
+            <div class="project-body">
+              <div class="project-head">
+                <h3>Discord Leaderboard Bot</h3>
+                <span class="project-status">Backend</span>
+              </div>
+              <p>A Discord.py bot that stores points, ranks members, and maintains a leaderboard with SQLite — small, practical, and community-ready.</p>
+              <div class="tag-row">
+                <span>Python</span><span>Discord.py</span><span>SQLite</span><span>Bot</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/Acceleratorer" target="_blank" rel="noreferrer">GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <img src="./assets/projects/autocommit.svg" alt="Autocommit heatmap project preview" loading="lazy" />
+            <div class="project-body">
+              <div class="project-head">
+                <h3>AutoCommit Heatmap Wizard</h3>
+                <span class="project-status">Automation</span>
+              </div>
+              <p>A Windows-friendly automation tool with human-like commit rhythms, cooldown logic, logs, and GitHub contribution analytics.</p>
+              <div class="tag-row">
+                <span>Python</span><span>Git</span><span>Scheduler</span><span>Logs</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/Acceleratorer" target="_blank" rel="noreferrer">GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal project-wide">
+            <img src="./assets/projects/portfolio.svg" alt="Portfolio project preview" loading="lazy" />
+            <div class="project-body">
+              <div class="project-head">
+                <h3>Accelra Portfolio</h3>
+                <span class="project-status">Web</span>
+              </div>
+              <p>This portfolio itself: a clean static site inspired by React/Next/Tailwind design language, ready for Vercel, GitHub Pages, or a custom Tenten domain.</p>
+              <div class="tag-row">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Tailwind-inspired</span>
+              </div>
+              <div class="project-links">
+                <a href="#top">Live page <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="proof" class="proof section-shell">
+      <div class="container">
+        <div class="section-heading reveal center-heading">
+          <p class="eyebrow">Proof of Work</p>
+          <h2>Numbers that sound real because they are real enough to defend.</h2>
+        </div>
+
+        <div class="stats-grid reveal">
+          <article class="stat-card"><strong data-count="20">0</strong><span>GitHub repositories / experiments</span></article>
+          <article class="stat-card"><strong data-count="300">0</strong><span>Algorithm problems practiced</span></article>
+          <article class="stat-card"><strong data-count="4">0</strong><span>Kaggle competition highlight</span></article>
+          <article class="stat-card"><strong data-count="6">0</strong><span>Core project directions</span></article>
+        </div>
+
+        <div class="timeline reveal">
+          <article>
+            <span>01</span>
+            <h3>Learn deeply</h3>
+            <p>Study math, algorithms, machine learning, and system design fundamentals.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Rebuild systems</h3>
+            <p>Fork, inspect, and rebuild parts of real projects to understand architecture.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Ship publicly</h3>
+            <p>Turn experiments into GitHub repos, demos, posts, and recruiter-friendly stories.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact section-shell">
+      <div class="container contact-grid">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Contact</p>
+          <h2>Let’s build something sharp.</h2>
+          <p class="section-description">For internships, collaborations, AI/data projects, or portfolio feedback — send a message or jump straight to GitHub.</p>
+
+          <div class="contact-links">
+            <button class="contact-chip" type="button" data-copy="noobtan77@gmail.com">
+              <i class="fa-solid fa-envelope"></i>
+              Copy email
+            </button>
+            <a class="contact-chip" href="https://github.com/Acceleratorer" target="_blank" rel="noreferrer">
+              <i class="fa-brands fa-github"></i>
+              GitHub
+            </a>
+            <a class="contact-chip" href="https://www.linkedin.com/in/tan-le-accel77/" target="_blank" rel="noreferrer">
+              <i class="fa-brands fa-linkedin"></i>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" id="contactForm">
+          <label>
+            <span>Name</span>
+            <input name="name" type="text" placeholder="Your name" required />
+          </label>
+          <label>
+            <span>Email</span>
+            <input name="email" type="email" placeholder="your@email.com" required />
+          </label>
+          <label>
+            <span>Subject</span>
+            <input name="subject" type="text" placeholder="Project / internship / collaboration" required />
+          </label>
+          <label>
+            <span>Message</span>
+            <textarea name="message" rows="5" placeholder="Tell me what you want to build..." required></textarea>
+          </label>
+          <button class="button button-primary form-submit" type="submit">
+            <i class="fa-solid fa-paper-plane"></i>
+            Open email draft
+          </button>
+          <p class="form-note">This static version opens your mail app. Later, connect Formspree, Netlify Forms, or a Node.js API.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Tan Le / Accelra. Built with HTML, CSS, JavaScript — ready to evolve into Next.js.</p>
+      <a href="#top" class="back-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></a>
+    </div>
+  </footer>
+
+  <div class="toast" role="status" aria-live="polite">Copied!</div>
+
+  <script src="./script.js"></script>
+</body>
+</html>

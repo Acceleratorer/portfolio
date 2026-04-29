@@ -1,0 +1,15 @@
+<svg width="960" height="540" viewBox="0 0 960 540" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="540" rx="24" fill="#070914"/>
+  <circle cx="820" cy="90" r="180" fill="#22D3EE" opacity="0.18"/>
+  <circle cx="160" cy="450" r="220" fill="#8B5CF6" opacity="0.22"/>
+  <rect x="82" y="80" width="796" height="380" rx="28" fill="white" opacity="0.07" stroke="white" stroke-opacity="0.16"/>
+  <rect x="120" y="126" width="720" height="58" rx="29" fill="white" opacity="0.1"/>
+  <circle cx="156" cy="155" r="18" fill="#8B5CF6"/>
+  <rect x="190" y="144" width="120" height="22" rx="11" fill="white" opacity="0.65"/>
+  <rect x="642" y="140" width="74" height="30" rx="15" fill="white" opacity="0.32"/>
+  <rect x="728" y="140" width="74" height="30" rx="15" fill="#22D3EE" opacity="0.76"/>
+  <text x="126" y="280" fill="white" font-family="Inter, Arial" font-size="54" font-weight="900">Tan Le / Accelra</text>
+  <text x="130" y="338" fill="#CBD5E1" font-family="Inter, Arial" font-size="28" font-weight="700">React · Next.js · Node.js · Tailwind</text>
+  <rect x="130" y="382" width="146" height="44" rx="22" fill="#8B5CF6"/>
+  <rect x="296" y="382" width="146" height="44" rx="22" fill="white" opacity="0.12"/>
+</svg>
