@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-# portfolio
-I code my web profile, included all my projects and skills
-=======
+
 # Accelra Portfolio Pro
 
 A polished static portfolio for **Tan Le / Accelra**.
@@ -27,7 +24,8 @@ python -m http.server 5500
 
 Then open:
 
-```txt
+```
+txt
 http://localhost:5500
 ```
 
@@ -48,16 +46,6 @@ http://localhost:5500
 3. Choose branch `main` and root folder.
 4. Add custom domain later.
 
-## Customize before publishing
-
-Search in `index.html` and replace:
-
-- `noobtan77@gmail.com`
-- GitHub / LinkedIn / Kaggle URLs
-- Project links
-- CV file in `assets/cv/Tan-Le-CV.txt`
-- Domain text if you buy one, for example `accelra.dev`
-
 ## Optional next upgrade
 
 Convert this static site to Next.js:
@@ -66,12 +54,3 @@ Convert this static site to Next.js:
 npx create-next-app@latest accelra-next
 ```
 
-Then split this page into React components:
-
-- `Hero.tsx`
-- `About.tsx`
-- `Skills.tsx`
-- `Projects.tsx`
-- `Proof.tsx`
-- `Contact.tsx`
->>>>>>> b8e746d (add things to deploy)
