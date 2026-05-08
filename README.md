@@ -54,3 +54,46 @@ Convert this static site to Next.js:
 npx create-next-app@latest accelra-next
 ```
 
+# Structure 
+```
+portfolio/
+├── index.html
+├── style.css
+├── script.js
+├── main.py
+├── README.md
+├── .gitignore
+│
+├── dashboard/
+│   ├── index.html
+│   ├── dashboard.css
+│   └── dashboard.js
+│
+├── projects/
+│   ├── index.html
+│   ├── projects.css
+│   └── projects.js
+│
+├── blog/
+│   ├── index.html
+│   ├── blog.css
+│   └── blog.js
+│
+├── assets/
+│   ├── img/
+│   │   ├── avatar.jpg
+│   │   ├── hero-bg.png
+│   │   └── project-ai-uit.png
+│   │
+│   ├── icons/
+│   │   ├── logo.png
+│   │   └── favicon.jpg
+│   │
+│   ├── cv/
+│   │   └── Tan-Le-CV.pdf
+│   │
+│   └── data/
+│       ├── projects.json
+│       └── skills.json
+```
+
