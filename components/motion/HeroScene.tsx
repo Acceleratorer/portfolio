@@ -83,13 +83,13 @@ export default function HeroScene() {
               </span>
             </div>
 
-            <div className="relative mt-4 min-h-[300px] overflow-hidden rounded-xl bg-surface-dark-soft sm:min-h-[360px]">
+            <div className="relative mt-4 min-h-[360px] overflow-hidden rounded-xl bg-surface-dark-soft sm:min-h-[430px] lg:min-h-[450px]">
               <Spline
                 scene={SPLINE_SCENE_URL}
                 className="absolute inset-0 h-full w-full"
               />
 
-              <div className="pointer-events-none absolute inset-x-4 bottom-4 rounded-xl border border-white/10 bg-surface-dark/85 p-4 backdrop-blur">
+              <div className="pointer-events-none absolute inset-x-4 bottom-4 rounded-xl border border-white/10 bg-surface-dark/80 p-3 backdrop-blur sm:p-4">
                 <div className="mb-3 flex items-center gap-2 text-sm font-medium text-on-dark">
                   <Sparkles size={16} className="text-primary" />
                   Shipping loop
@@ -98,7 +98,7 @@ export default function HeroScene() {
                   {terminalLines.map((line, index) => (
                     <span
                       key={line}
-                      className="animate-pulse rounded-lg bg-surface-dark-elevated px-3 py-2"
+                      className="animate-pulse rounded-lg bg-surface-dark-elevated px-3 py-2 leading-tight"
                       style={{ animationDelay: `${index * 180}ms` }}
                     >
                       <span className="text-accent-teal">$</span> {line}
