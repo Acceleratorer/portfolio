@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { ThemeToggle } from "@/components/layout/ThemeToggle";
 
 const navItems = [
   { label: "Home", href: "/" },
@@ -61,6 +62,8 @@ export function Navbar() {
             Resume
           </Link>
 
+          <ThemeToggle />
+
           <Link
             href="/#contact"
             className="inline-flex h-10 items-center rounded-lg bg-primary px-5 text-sm font-medium text-on-primary transition active:bg-primary-active"
@@ -93,6 +96,17 @@ export function Navbar() {
                 {item.label}
               </Link>
             ))}
+
+            <div className="flex items-center justify-between gap-3 rounded-lg px-4 py-2">
+              <Link
+                href="/cv/Tan-Le-CV.txt"
+                onClick={() => setOpen(false)}
+                className="text-sm font-medium text-body"
+              >
+                Resume
+              </Link>
+              <ThemeToggle className="h-10 w-10" />
+            </div>
 
             <Link
               href="/#contact"

@@ -3,6 +3,7 @@ import "./globals.css";
 import { siteConfig } from "@/config/site";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { ThemeProvider } from "@/components/sections/ThemeProvider";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -22,13 +23,15 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className="font-sans antialiased">
-        <div className="noise-layer" />
-        <div className="fixed inset-0 -z-10 grid-mask" />
-        <Navbar />
-        {children}
-        <Footer />
+        <ThemeProvider>
+          <div className="noise-layer" />
+          <div className="fixed inset-0 -z-10 grid-mask" />
+          <Navbar />
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
