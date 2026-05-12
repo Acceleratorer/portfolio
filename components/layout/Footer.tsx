@@ -1,21 +1,43 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { siteConfig, socialLinks } from "@/config/site";
 
 export function Footer() {
   return (
-    <footer className="border-t border-white/10 py-10">
-      <div className="mx-auto flex max-w-6xl flex-col gap-6 px-5 md:flex-row md:items-center md:justify-between">
-        <p className="text-sm text-slate-400">
-          © {new Date().getFullYear()} {siteConfig.name} / {siteConfig.alias}. Built with Next.js, TypeScript and Tailwind CSS.
-        </p>
+    <footer className="bg-surface-dark py-14 text-on-dark-soft">
+      <div className="mx-auto grid max-w-6xl gap-8 px-5 md:grid-cols-[1fr_auto] md:items-start">
+        <div>
+          <div className="flex items-center gap-3 text-on-dark">
+            <span className="grid h-7 w-7 place-items-center overflow-hidden rounded-full bg-canvas">
+              <Image
+                src="/icons/logo.png"
+                alt="Tan Le logo"
+                width={28}
+                height={28}
+                className="h-full w-full object-cover"
+              />
+            </span>
+            <span className="text-sm font-medium tracking-[0.12em]">
+              {siteConfig.name} / {siteConfig.alias}
+            </span>
+          </div>
+          <p className="mt-4 max-w-xl text-sm leading-6">
+            {siteConfig.description}
+          </p>
+          <p className="mt-6 text-sm">
+            (c) {new Date().getFullYear()} {siteConfig.name}. Built with Next.js,
+            TypeScript, and Tailwind CSS.
+          </p>
+        </div>
+
         <div className="flex flex-wrap gap-3">
           {socialLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               target="_blank"
-              className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-bold text-slate-300 transition hover:bg-white/10 hover:text-white"
+              className="inline-flex items-center gap-2 rounded-lg bg-surface-dark-elevated px-4 py-2 text-sm font-medium text-on-dark"
             >
               {link.label} <ArrowUpRight size={14} />
             </Link>

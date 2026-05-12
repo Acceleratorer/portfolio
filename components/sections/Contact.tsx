@@ -11,46 +11,91 @@ export function Contact() {
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    const subject = encodeURIComponent(String(data.get("subject") ?? "Portfolio contact"));
-    const message = encodeURIComponent(`Hi Tan,\n\n${data.get("message")}\n\nFrom: ${data.get("name")}\nEmail: ${data.get("email")}`);
+    const subject = encodeURIComponent(
+      String(data.get("subject") ?? "Portfolio contact"),
+    );
+    const message = encodeURIComponent(
+      `Hi Tan,\n\n${data.get("message")}\n\nFrom: ${data.get(
+        "name",
+      )}\nEmail: ${data.get("email")}`,
+    );
     window.location.href = `mailto:${siteConfig.email}?subject=${subject}&body=${message}`;
     setSent(true);
   }
 
   return (
-    <section id="contact" className="px-5 py-24">
+    <section id="contact" className="bg-canvas px-5 py-24">
       <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[0.9fr_1.1fr]">
         <Reveal>
-          <p className="font-mono text-xs font-black uppercase tracking-[0.16em] text-cyan">Contact</p>
-          <h2 className="mt-4 text-4xl font-black leading-tight tracking-[-0.055em] sm:text-5xl">Let’s build something sharp.</h2>
-          <p className="mt-5 text-lg leading-8 text-slate-400">For internships, collaborations, AI/data projects, or portfolio feedback — send a message or jump straight to GitHub.</p>
-          <a href={`mailto:${siteConfig.email}`} className="mt-7 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-3 font-black text-white hover:bg-white/10">
+          <p className="text-xs font-medium uppercase tracking-[0.16em] text-primary">
+            Contact
+          </p>
+          <h2 className="mt-4 font-display text-5xl font-normal leading-tight tracking-[-0.03em] text-ink sm:text-6xl">
+            Lets build something sharp.
+          </h2>
+          <p className="mt-5 text-lg leading-8 text-body">
+            For internships, collaborations, AI/data projects, or portfolio
+            feedback, send a message or jump straight to GitHub.
+          </p>
+          <a
+            href={`mailto:${siteConfig.email}`}
+            className="mt-7 inline-flex h-11 items-center gap-2 rounded-lg border border-hairline bg-canvas px-5 text-sm font-medium text-ink"
+          >
             <Mail size={18} /> {siteConfig.email}
           </a>
         </Reveal>
 
         <Reveal delay={0.08}>
-          <form onSubmit={handleSubmit} className="panel grid gap-4 rounded-card p-6">
-            <label className="grid gap-2 text-sm font-bold text-slate-400">
+          <form
+            onSubmit={handleSubmit}
+            className="grid gap-4 rounded-card bg-surface-card p-6"
+          >
+            <label className="grid gap-2 text-sm font-medium text-body">
               Name
-              <input name="name" required className="rounded-2xl border border-white/10 bg-black/20 px-4 py-3 text-white outline-none focus:border-cyan/60" placeholder="Your name" />
+              <input
+                name="name"
+                required
+                className="h-10 rounded-lg border border-hairline bg-canvas px-4 text-ink outline-none focus:border-primary focus:ring-4 focus:ring-primary/15"
+                placeholder="Your name"
+              />
             </label>
-            <label className="grid gap-2 text-sm font-bold text-slate-400">
+            <label className="grid gap-2 text-sm font-medium text-body">
               Email
-              <input name="email" type="email" required className="rounded-2xl border border-white/10 bg-black/20 px-4 py-3 text-white outline-none focus:border-cyan/60" placeholder="your@email.com" />
+              <input
+                name="email"
+                type="email"
+                required
+                className="h-10 rounded-lg border border-hairline bg-canvas px-4 text-ink outline-none focus:border-primary focus:ring-4 focus:ring-primary/15"
+                placeholder="your@email.com"
+              />
             </label>
-            <label className="grid gap-2 text-sm font-bold text-slate-400">
+            <label className="grid gap-2 text-sm font-medium text-body">
               Subject
-              <input name="subject" required className="rounded-2xl border border-white/10 bg-black/20 px-4 py-3 text-white outline-none focus:border-cyan/60" placeholder="Project / internship / collaboration" />
+              <input
+                name="subject"
+                required
+                className="h-10 rounded-lg border border-hairline bg-canvas px-4 text-ink outline-none focus:border-primary focus:ring-4 focus:ring-primary/15"
+                placeholder="Project / internship / collaboration"
+              />
             </label>
-            <label className="grid gap-2 text-sm font-bold text-slate-400">
+            <label className="grid gap-2 text-sm font-medium text-body">
               Message
-              <textarea name="message" rows={5} required className="rounded-2xl border border-white/10 bg-black/20 px-4 py-3 text-white outline-none focus:border-cyan/60" placeholder="Tell me what you want to build..." />
+              <textarea
+                name="message"
+                rows={5}
+                required
+                className="rounded-lg border border-hairline bg-canvas px-4 py-3 text-ink outline-none focus:border-primary focus:ring-4 focus:ring-primary/15"
+                placeholder="Tell me what you want to build..."
+              />
             </label>
-            <button className="inline-flex min-h-14 items-center justify-center gap-2 rounded-full bg-gradient-to-r from-violet to-cyan px-6 font-black text-white shadow-cyan transition hover:-translate-y-1">
+            <button className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg bg-primary px-6 text-sm font-medium text-on-primary transition active:bg-primary-active">
               Open email draft <Send size={18} />
             </button>
-            {sent && <p className="text-sm font-bold text-cyan">Opening your email app...</p>}
+            {sent && (
+              <p className="text-sm font-medium text-primary">
+                Opening your email app...
+              </p>
+            )}
           </form>
         </Reveal>
       </div>

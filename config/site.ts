@@ -3,12 +3,12 @@ import type { NavItem, SocialLink } from "@/types";
 export const siteConfig = {
   name: "Tan Le",
   alias: "Accelra",
-  title: "Tan Le — Accelra Technical Portfolio",
+  title: "Tan Le - Accelra Technical Portfolio",
   description:
-    "Computer Science student at UIT building AI, data, MLOps, and web systems.",
+    "Computer Science Student at UIT building AI, Data, MLOps, and Web Systems.",
   url: "https://accelra.dev",
   email: "noobtan77@gmail.com",
-  location: "Ho Chi Minh City, Vietnam"
+  location: "Ho Chi Minh City, Vietnam",
 };
 
 export const navItems: NavItem[] = [
@@ -16,11 +16,11 @@ export const navItems: NavItem[] = [
   { label: "Dashboard", href: "/dashboard" },
   { label: "Projects", href: "/projects" },
   { label: "Blog", href: "/blog" },
-  { label: "Contact", href: "/#contact" }
+  { label: "Contact", href: "/#contact" },
 ];
 
 export const socialLinks: SocialLink[] = [
   { label: "GitHub", href: "https://github.com/Acceleratorer" },
   { label: "Kaggle", href: "https://www.kaggle.com/accelra" },
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/tan-le-accel77/" }
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/tan-le-accel77/" },
 ];

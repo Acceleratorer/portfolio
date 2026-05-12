@@ -4,23 +4,23 @@ import { siteConfig } from "@/config/site";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 
-
-export const metadata = {
-  title: "Tan Le — Accelra Portfolio",
-  description:
-    "Computer Science student at UIT building AI, Data, MLOps, and Web systems.",
+export const metadata: Metadata = {
+  metadataBase: new URL(siteConfig.url),
+  title: siteConfig.title,
+  description: siteConfig.description,
   icons: {
     icon: "/icons/favicon.jpg",
   },
   openGraph: {
-    title: "Tan Le — Accelra Portfolio",
-    description:
-      "AI, Data Science, MLOps, Web, and competitive programming projects.",
+    title: siteConfig.title,
+    description: siteConfig.description,
     images: ["/og-cover.png"],
   },
 };
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({
+  children,
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
       <body className="font-sans antialiased">
