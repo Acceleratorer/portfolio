@@ -79,7 +79,7 @@ export default function HeroScene() {
               <span className="h-3 w-3 rounded-full bg-accent-amber" />
               <span className="h-3 w-3 rounded-full bg-accent-teal" />
               <span className="ml-auto font-mono text-xs text-on-dark-soft">
-                accelra.scene
+                accel.io.vn
               </span>
             </div>
 
