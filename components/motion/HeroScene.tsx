@@ -2,7 +2,7 @@ import Spline from "@splinetool/react-spline/next";
 import { ArrowUpRight, Github, Sparkles } from "lucide-react";
 
 const SPLINE_SCENE_URL =
-  "https://prod.spline.design/9WOwIwBRDCnyurxO/scene.splinecode";
+  "https://prod.spline.design/2N9EIKqtUrQy2vvp/scene.splinecode";
 
 const stack = ["Python", "PyTorch", "Next.js", "MLOps"];
 
