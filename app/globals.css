@@ -3,77 +3,114 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: light;
-  --color-canvas: 232 232 229;
-  --color-surface-soft: 246 246 240;
-  --color-surface-card: 255 255 250;
-  --color-surface-cream-strong: 217 217 211;
-  --color-surface-dark: 4 4 4;
-  --color-surface-dark-elevated: 16 16 16;
-  --color-surface-dark-soft: 30 30 29;
-  --color-hairline: 202 202 194;
-  --color-hairline-soft: 222 222 214;
-  --color-primary: 5 5 5;
-  --color-primary-active: 35 35 35;
-  --color-primary-disabled: 207 207 199;
-  --color-accent-teal: 33 230 191;
-  --color-accent-amber: 244 224 78;
-  --color-brand-pink: 255 91 164;
-  --color-brand-teal: 20 205 167;
-  --color-brand-lavender: 176 145 255;
-  --color-brand-peach: 255 203 139;
-  --color-brand-ochre: 244 224 78;
-  --color-brand-mint: 187 255 102;
-  --color-brand-coral: 255 111 76;
-  --color-ink: 5 5 5;
-  --color-body-strong: 22 22 22;
-  --color-body: 50 50 48;
-  --color-muted: 97 97 92;
-  --color-muted-soft: 142 142 134;
-  --color-on-primary: 255 255 255;
-  --color-on-dark: 255 255 255;
-  --color-on-dark-soft: 217 217 210;
-  --color-success: 34 197 94;
-  --color-warning: 245 158 11;
-  --color-error: 239 68 68;
-  --color-panel: 255 255 250;
+  color-scheme: dark;
+  --color-canvas: 7 8 12;
+  --color-surface-soft: 11 13 19;
+  --color-surface-card: 15 17 24;
+  --color-surface-cream-strong: 244 240 223;
+  --color-surface-dark: 7 8 12;
+  --color-surface-dark-elevated: 21 24 36;
+  --color-surface-dark-soft: 11 13 19;
+  --color-hairline: 76 82 100;
+  --color-hairline-soft: 76 82 100;
+  --color-primary: 114 247 178;
+  --color-primary-active: 78 229 150;
+  --color-primary-disabled: 42 48 62;
+  --color-accent-teal: 99 216 255;
+  --color-accent-amber: 245 200 76;
+  --color-brand-pink: 255 107 138;
+  --color-brand-teal: 99 216 255;
+  --color-brand-lavender: 156 124 255;
+  --color-brand-peach: 245 200 76;
+  --color-brand-ochre: 245 200 76;
+  --color-brand-mint: 114 247 178;
+  --color-brand-coral: 255 107 138;
+  --color-ink: 247 248 255;
+  --color-body-strong: 229 232 242;
+  --color-body: 197 200 212;
+  --color-muted: 126 132 151;
+  --color-muted-soft: 76 82 100;
+  --color-on-primary: 6 16 12;
+  --color-on-dark: 247 248 255;
+  --color-on-dark-soft: 197 200 212;
+  --color-success: 114 247 178;
+  --color-warning: 245 200 76;
+  --color-error: 255 93 115;
+  --color-panel: 15 17 24;
 }
 
 .dark {
   color-scheme: dark;
-  --color-canvas: 5 5 5;
-  --color-surface-soft: 18 18 18;
-  --color-surface-card: 30 30 29;
-  --color-surface-cream-strong: 47 47 44;
-  --color-surface-dark: 2 2 2;
-  --color-surface-dark-elevated: 16 16 16;
-  --color-surface-dark-soft: 30 30 29;
-  --color-hairline: 55 55 52;
-  --color-hairline-soft: 43 43 40;
-  --color-primary: 255 255 250;
-  --color-primary-active: 232 232 229;
-  --color-primary-disabled: 55 55 52;
-  --color-accent-teal: 33 230 191;
-  --color-accent-amber: 244 224 78;
-  --color-brand-pink: 255 91 164;
-  --color-brand-teal: 20 205 167;
-  --color-brand-lavender: 176 145 255;
-  --color-brand-peach: 255 203 139;
-  --color-brand-ochre: 244 224 78;
-  --color-brand-mint: 187 255 102;
-  --color-brand-coral: 255 111 76;
-  --color-ink: 255 255 250;
-  --color-body-strong: 242 242 235;
-  --color-body: 217 217 210;
-  --color-muted: 166 166 157;
-  --color-muted-soft: 125 125 117;
-  --color-on-primary: 5 5 5;
-  --color-on-dark: 255 255 250;
-  --color-on-dark-soft: 207 207 199;
-  --color-success: 34 197 94;
-  --color-warning: 245 158 11;
-  --color-error: 239 68 68;
-  --color-panel: 26 42 42;
+  --color-canvas: 7 8 12;
+  --color-surface-soft: 11 13 19;
+  --color-surface-card: 15 17 24;
+  --color-surface-cream-strong: 244 240 223;
+  --color-surface-dark: 7 8 12;
+  --color-surface-dark-elevated: 21 24 36;
+  --color-surface-dark-soft: 11 13 19;
+  --color-hairline: 76 82 100;
+  --color-hairline-soft: 76 82 100;
+  --color-primary: 114 247 178;
+  --color-primary-active: 78 229 150;
+  --color-primary-disabled: 42 48 62;
+  --color-accent-teal: 99 216 255;
+  --color-accent-amber: 245 200 76;
+  --color-brand-pink: 255 107 138;
+  --color-brand-teal: 99 216 255;
+  --color-brand-lavender: 156 124 255;
+  --color-brand-peach: 245 200 76;
+  --color-brand-ochre: 245 200 76;
+  --color-brand-mint: 114 247 178;
+  --color-brand-coral: 255 107 138;
+  --color-ink: 247 248 255;
+  --color-body-strong: 229 232 242;
+  --color-body: 197 200 212;
+  --color-muted: 126 132 151;
+  --color-muted-soft: 76 82 100;
+  --color-on-primary: 6 16 12;
+  --color-on-dark: 247 248 255;
+  --color-on-dark-soft: 197 200 212;
+  --color-success: 114 247 178;
+  --color-warning: 245 200 76;
+  --color-error: 255 93 115;
+  --color-panel: 15 17 24;
+}
+
+.light {
+  color-scheme: light;
+  --color-canvas: 244 240 223;
+  --color-surface-soft: 235 229 208;
+  --color-surface-card: 255 252 238;
+  --color-surface-cream-strong: 244 240 223;
+  --color-surface-dark: 7 8 12;
+  --color-surface-dark-elevated: 21 24 36;
+  --color-surface-dark-soft: 11 13 19;
+  --color-hairline: 106 109 118;
+  --color-hairline-soft: 106 109 118;
+  --color-primary: 16 17 22;
+  --color-primary-active: 51 54 65;
+  --color-primary-disabled: 212 205 184;
+  --color-accent-teal: 0 119 154;
+  --color-accent-amber: 169 117 0;
+  --color-brand-pink: 198 46 82;
+  --color-brand-teal: 0 119 154;
+  --color-brand-lavender: 102 75 198;
+  --color-brand-peach: 169 117 0;
+  --color-brand-ochre: 169 117 0;
+  --color-brand-mint: 12 126 77;
+  --color-brand-coral: 198 46 82;
+  --color-ink: 16 17 22;
+  --color-body-strong: 35 38 48;
+  --color-body: 51 54 65;
+  --color-muted: 106 109 118;
+  --color-muted-soft: 132 128 112;
+  --color-on-primary: 255 252 238;
+  --color-on-dark: 247 248 255;
+  --color-on-dark-soft: 197 200 212;
+  --color-success: 12 126 77;
+  --color-warning: 169 117 0;
+  --color-error: 198 46 82;
+  --color-panel: 255 252 238;
 }
 
 * {
@@ -104,27 +141,34 @@ body {
   position: fixed;
   inset: 0;
   z-index: -1;
-  opacity: 0.08;
+  opacity: 0.12;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.28'/%3E%3C/svg%3E");
 }
 
 .grid-mask {
   background-image:
-    linear-gradient(rgb(var(--color-hairline) / 0.36) 1px, transparent 1px),
+    linear-gradient(rgb(var(--color-hairline) / 0.055) 1px, transparent 1px),
     linear-gradient(
       90deg,
-      rgb(var(--color-hairline) / 0.36) 1px,
+      rgb(var(--color-hairline) / 0.055) 1px,
+      transparent 1px
+    ),
+    radial-gradient(
+      rgb(var(--color-hairline) / 0.13) 1px,
       transparent 1px
     );
-  background-size: 72px 72px;
-  mask-image: linear-gradient(to bottom, black, transparent 64%);
+  background-size:
+    80px 80px,
+    80px 80px,
+    18px 18px;
+  mask-image: linear-gradient(to bottom, black, transparent 82%);
 }
 
 .text-gradient {
   background: linear-gradient(
     135deg,
     rgb(var(--color-ink)),
-    rgb(var(--color-brand-ochre)) 48%,
+    rgb(var(--color-brand-mint)) 46%,
     rgb(var(--color-brand-teal))
   );
   -webkit-background-clip: text;
@@ -133,9 +177,91 @@ body {
 }
 
 .panel {
-  border: 1px solid rgb(var(--color-hairline));
+  border: 1px solid rgb(var(--color-hairline) / 0.1);
   background: rgb(var(--color-panel));
   box-shadow: none;
+}
+
+.bg-dot-grid {
+  background-color: rgb(var(--color-canvas));
+  background-image: radial-gradient(
+    rgb(var(--color-hairline) / 0.13) 1px,
+    transparent 1px
+  );
+  background-size: 18px 18px;
+}
+
+.bg-technical-grid {
+  background-color: rgb(var(--color-canvas));
+  background-image:
+    linear-gradient(rgb(var(--color-hairline) / 0.055) 1px, transparent 1px),
+    linear-gradient(
+      90deg,
+      rgb(var(--color-hairline) / 0.055) 1px,
+      transparent 1px
+    ),
+    radial-gradient(rgb(var(--color-hairline) / 0.12) 1px, transparent 1px);
+  background-size:
+    80px 80px,
+    80px 80px,
+    18px 18px;
+}
+
+.bg-ivory-grid {
+  background-color: rgb(var(--color-surface-cream-strong));
+  background-image: radial-gradient(rgba(7, 8, 12, 0.12) 1px, transparent 1px);
+  background-size: 18px 18px;
+}
+
+.scanline {
+  position: relative;
+  overflow: hidden;
+}
+
+.scanline::after {
+  content: "";
+  position: absolute;
+  inset: -60% 0 auto;
+  height: 42%;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgb(var(--color-brand-mint) / 0.14),
+    transparent
+  );
+  animation: scanline 4.2s linear infinite;
+  pointer-events: none;
+}
+
+.equalizer-bar {
+  animation: equalizer 1.8s ease-in-out infinite;
+  transform-origin: bottom;
+}
+
+@keyframes equalizer {
+  0%,
+  100% {
+    transform: scaleY(0.32);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes scanline {
+  0% {
+    transform: translateY(-40%);
+  }
+  100% {
+    transform: translateY(340%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .equalizer-bar,
+  .scanline::after {
+    animation: none;
+  }
 }
 
 .terminal-dots span {

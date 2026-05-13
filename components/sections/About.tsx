@@ -28,14 +28,14 @@ export function About() {
   return (
     <section
       id="work"
-      className="rounded-t-[34px] bg-surface-dark px-5 py-20 text-on-dark md:py-24"
+      className="border-y border-white/10 bg-dot-grid px-5 py-20 text-on-dark md:py-24"
     >
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-5 md:grid-cols-3">
           {promises.map((item) => (
             <Reveal key={item.title}>
-              <article className="min-h-44 rounded-3xl border border-white/10 bg-white/[0.03] p-6">
-                <h2 className="font-display text-4xl font-black uppercase leading-none tracking-normal">
+              <article className="min-h-44 rounded-xl border border-white/10 bg-surface-card p-6">
+                <h2 className="font-display text-4xl font-semibold uppercase leading-none tracking-normal">
                   {item.title}
                 </h2>
                 <p className="mt-5 max-w-sm text-sm leading-6 text-on-dark-soft">
@@ -51,7 +51,7 @@ export function About() {
             <p className="text-xs font-black uppercase text-brand-mint">
               Work system
             </p>
-            <h2 className="mt-4 max-w-2xl font-display text-5xl font-black uppercase leading-none tracking-normal sm:text-6xl">
+            <h2 className="mt-4 max-w-2xl font-display text-5xl font-semibold uppercase leading-none tracking-normal sm:text-6xl">
               We are turning learning into shipped proof.
             </h2>
           </Reveal>
@@ -74,7 +74,7 @@ export function About() {
               {pills.map((pill) => (
                 <span
                   key={pill}
-                  className="rounded-full border border-white/10 bg-white/[0.06] px-4 py-2 text-sm font-bold text-on-dark"
+                  className="rounded-full border border-white/10 bg-surface-card px-4 py-2 text-sm font-medium text-on-dark"
                 >
                   {pill}
                 </span>

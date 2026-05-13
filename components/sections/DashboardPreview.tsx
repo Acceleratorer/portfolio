@@ -23,13 +23,13 @@ const statThemes = [
 
 export function DashboardPreview() {
   return (
-    <section className="bg-surface-dark px-5 py-20 text-on-dark md:py-24">
+    <section className="bg-technical-grid px-5 py-20 text-on-dark md:py-24">
       <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.78fr_1.22fr] lg:items-center">
         <Reveal>
           <p className="text-xs font-black uppercase text-brand-mint">
             Introducing Accelra OS
           </p>
-          <h2 className="mt-4 max-w-xl font-display text-5xl font-black uppercase leading-none tracking-normal sm:text-6xl">
+          <h2 className="mt-4 max-w-xl font-display text-5xl font-semibold uppercase leading-none tracking-normal sm:text-6xl">
             A public command center for the build loop.
           </h2>
           <p className="mt-5 max-w-lg text-lg leading-8 text-on-dark-soft">
@@ -43,12 +43,12 @@ export function DashboardPreview() {
               return (
                 <article
                   key={stat.label}
-                  className={`rounded-3xl p-6 ${
+                  className={`rounded-xl p-6 ${
                     statThemes[index % statThemes.length]
                   }`}
                 >
                   <Icon />
-                  <strong className="mt-6 block font-display text-5xl font-black tracking-normal">
+                  <strong className="mt-6 block font-display text-5xl font-medium tracking-normal">
                     {stat.value}+
                   </strong>
                   <span className="mt-2 block text-sm font-bold opacity-80">
@@ -61,11 +61,11 @@ export function DashboardPreview() {
         </Reveal>
 
         <Reveal delay={0.08}>
-          <div className="rounded-[28px] border border-white/10 bg-surface-dark-elevated p-4">
-            <div className="rounded-3xl bg-surface-card p-5 text-ink">
+          <div className="scanline rounded-2xl border border-white/10 bg-surface-card p-4">
+            <div className="rounded-xl bg-surface-dark-soft p-5 text-ink">
               <div className="flex flex-wrap items-start justify-between gap-5">
                 <div>
-                  <h3 className="font-display text-3xl font-black uppercase tracking-normal">
+                  <h3 className="font-display text-3xl font-semibold uppercase tracking-normal">
                     Project pipeline
                   </h3>
                   <p className="mt-2 text-sm text-muted">

@@ -72,13 +72,13 @@ export function Skills() {
       : skills.filter((skill) => skill.category === filter);
 
   return (
-    <section id="skills" className="bg-canvas px-5 py-20 md:py-24">
+    <section id="skills" className="bg-dot-grid px-5 py-20 md:py-24">
       <div className="mx-auto max-w-7xl">
         <Reveal className="max-w-3xl">
-          <p className="text-xs font-black uppercase text-muted">
-            Capability stack
+          <p className="text-xs font-medium uppercase text-brand-mint">
+            Feature matrix
           </p>
-          <h2 className="mt-4 font-display text-5xl font-black uppercase leading-none tracking-normal text-ink sm:text-6xl">
+          <h2 className="mt-4 font-display text-5xl font-semibold uppercase leading-none tracking-normal text-ink sm:text-6xl">
             Run a better learning system with data.
           </h2>
           <p className="mt-5 max-w-2xl text-lg leading-8 text-body">
@@ -93,7 +93,7 @@ export function Skills() {
               key={item}
               onClick={() => setFilter(item)}
               className={cn(
-                "rounded-full border border-hairline px-4 py-2 text-sm font-bold capitalize text-muted transition",
+                "rounded-full border border-white/10 px-4 py-2 text-sm font-medium capitalize text-muted transition",
                 filter === item
                   ? "bg-primary text-on-primary"
                   : "bg-surface-card hover:border-primary hover:text-ink",
@@ -118,11 +118,12 @@ export function Skills() {
                 transition={{ delay: index * 0.035 }}
                 className={cn(
                   "min-h-52 rounded-[22px] border border-hairline p-6",
+                  "border-white/10",
                   theme.card,
                 )}
               >
                 <Icon />
-                <h3 className="mt-7 text-lg font-black uppercase">
+                <h3 className="mt-7 text-lg font-semibold uppercase">
                   {skill.name}
                 </h3>
                 <p className={cn("mt-1 text-sm", theme.body)}>{skill.note}</p>

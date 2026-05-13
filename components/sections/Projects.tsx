@@ -7,47 +7,47 @@ import { cn } from "@/lib/utils";
 
 const projectThemes = [
   {
-    card: "bg-brand-mint text-ink",
-    body: "text-body",
-    badge: "bg-primary text-on-primary",
-    tag: "bg-white/50 text-ink",
-    link: "text-ink",
+    card: "bg-brand-mint text-surface-dark",
+    body: "text-surface-dark/75",
+    badge: "bg-surface-dark text-on-dark",
+    tag: "bg-black/10 text-surface-dark",
+    link: "text-surface-dark",
   },
   {
-    card: "bg-brand-lavender text-ink",
-    body: "text-body",
-    badge: "bg-primary text-on-primary",
-    tag: "bg-white/50 text-ink",
-    link: "text-ink",
+    card: "bg-brand-lavender text-surface-dark",
+    body: "text-surface-dark/75",
+    badge: "bg-surface-dark text-on-dark",
+    tag: "bg-black/10 text-surface-dark",
+    link: "text-surface-dark",
   },
   {
-    card: "bg-brand-peach text-ink",
-    body: "text-body",
-    badge: "bg-primary text-on-primary",
-    tag: "bg-white/50 text-ink",
-    link: "text-ink",
+    card: "bg-brand-peach text-surface-dark",
+    body: "text-surface-dark/75",
+    badge: "bg-surface-dark text-on-dark",
+    tag: "bg-black/10 text-surface-dark",
+    link: "text-surface-dark",
   },
   {
-    card: "bg-brand-ochre text-ink",
-    body: "text-body",
-    badge: "bg-primary text-on-primary",
-    tag: "bg-white/50 text-ink",
-    link: "text-ink",
+    card: "bg-brand-ochre text-surface-dark",
+    body: "text-surface-dark/75",
+    badge: "bg-surface-dark text-on-dark",
+    tag: "bg-black/10 text-surface-dark",
+    link: "text-surface-dark",
   },
 ];
 
 export function Projects() {
   return (
-    <section id="projects" className="bg-surface-soft px-5 py-20 md:py-24">
+    <section id="projects" className="bg-ivory-grid px-5 py-20 md:py-24">
       <div className="mx-auto max-w-7xl">
         <Reveal className="max-w-3xl">
-          <p className="text-xs font-black uppercase text-muted">
+          <p className="text-xs font-medium uppercase text-surface-dark/70">
             Use case library
           </p>
-          <h2 className="mt-4 font-display text-5xl font-black uppercase leading-none tracking-normal text-ink sm:text-6xl">
+          <h2 className="mt-4 font-display text-5xl font-semibold uppercase leading-none tracking-normal text-surface-dark sm:text-6xl">
             Explore projects that prove the work.
           </h2>
-          <p className="mt-5 max-w-2xl text-lg leading-8 text-body">
+          <p className="mt-5 max-w-2xl text-lg leading-8 text-surface-dark/75">
             AI/Data, computer vision, automation, and portfolio engineering
             proof-of-work.
           </p>
@@ -61,7 +61,7 @@ export function Projects() {
               <Reveal key={project.slug} delay={index * 0.05}>
                 <article
                   className={cn(
-                    "flex h-full flex-col overflow-hidden rounded-[26px] border border-hairline",
+                    "flex h-full flex-col overflow-hidden rounded-xl border border-black/15",
                     theme.card,
                   )}
                 >
@@ -70,11 +70,11 @@ export function Projects() {
                     alt={`${project.title} preview`}
                     width={900}
                     height={520}
-                    className="h-44 w-full border-b border-black/10 bg-surface-card object-cover"
+                    className="h-44 w-full border-b border-black/10 bg-white/70 object-cover"
                   />
                   <div className="flex flex-1 flex-col p-6">
                     <div className="flex items-start justify-between gap-4">
-                      <h3 className="font-display text-2xl font-black uppercase leading-none tracking-normal">
+                      <h3 className="font-display text-2xl font-semibold uppercase leading-none tracking-normal">
                         {project.title}
                       </h3>
                       <span
