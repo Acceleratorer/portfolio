@@ -28,7 +28,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
           <Image src={project.cover} alt={project.title} width={1100} height={620} className="h-[360px] w-full border-b border-hairline object-cover" />
           <div className="p-7 sm:p-10">
             <span className="rounded-full bg-primary px-3 py-1 text-xs font-semibold uppercase text-on-primary">{project.status}</span>
-            <h1 className="mt-5 font-display text-5xl font-medium leading-none tracking-[-0.055em] sm:text-7xl">{project.title}</h1>
+            <h1 className="mt-5 font-display text-5xl font-black uppercase leading-none tracking-normal sm:text-7xl">{project.title}</h1>
             <p className="mt-6 text-lg leading-8 text-body">{project.longDescription}</p>
 
             <div className="mt-7 flex flex-wrap gap-2">

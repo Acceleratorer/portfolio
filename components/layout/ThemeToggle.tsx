@@ -19,7 +19,7 @@ export function ThemeToggle({ className }: ThemeToggleProps) {
   const isDark = mounted && resolvedTheme === "dark";
   const label = isDark ? "Switch to light theme" : "Switch to dark theme";
   const buttonClassName = [
-    "grid h-10 w-10 place-items-center rounded-full border border-hairline bg-canvas text-ink transition active:bg-surface-card",
+    "grid h-10 w-10 place-items-center rounded-full border border-primary bg-surface-card text-ink transition active:bg-primary active:text-on-primary",
     className,
   ]
     .filter(Boolean)

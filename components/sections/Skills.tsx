@@ -27,34 +27,34 @@ const icons = {
 
 const cardThemes = [
   {
-    card: "bg-brand-pink text-on-dark",
-    body: "text-white/85",
-    meter: "bg-white/30",
-    fill: "bg-white",
-  },
-  {
-    card: "bg-brand-teal text-on-dark",
-    body: "text-on-dark-soft",
-    meter: "bg-white/25",
-    fill: "bg-white",
-  },
-  {
-    card: "bg-brand-lavender text-ink",
+    card: "bg-surface-card text-ink",
     body: "text-body",
-    meter: "bg-primary/15",
-    fill: "bg-primary",
+    meter: "bg-primary-disabled",
+    fill: "bg-brand-mint",
   },
   {
-    card: "bg-brand-peach text-ink",
+    card: "bg-surface-card text-ink",
     body: "text-body",
-    meter: "bg-primary/15",
-    fill: "bg-primary",
+    meter: "bg-primary-disabled",
+    fill: "bg-brand-ochre",
   },
   {
-    card: "bg-brand-ochre text-ink",
+    card: "bg-surface-card text-ink",
     body: "text-body",
-    meter: "bg-primary/15",
-    fill: "bg-primary",
+    meter: "bg-primary-disabled",
+    fill: "bg-brand-lavender",
+  },
+  {
+    card: "bg-surface-card text-ink",
+    body: "text-body",
+    meter: "bg-primary-disabled",
+    fill: "bg-brand-peach",
+  },
+  {
+    card: "bg-surface-card text-ink",
+    body: "text-body",
+    meter: "bg-primary-disabled",
+    fill: "bg-brand-teal",
   },
   {
     card: "bg-surface-card text-ink",
@@ -72,31 +72,31 @@ export function Skills() {
       : skills.filter((skill) => skill.category === filter);
 
   return (
-    <section id="skills" className="bg-canvas px-5 py-24">
-      <div className="mx-auto max-w-6xl">
-        <Reveal className="mx-auto max-w-3xl text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-brand-coral">
-            Skills
+    <section id="skills" className="bg-canvas px-5 py-20 md:py-24">
+      <div className="mx-auto max-w-7xl">
+        <Reveal className="max-w-3xl">
+          <p className="text-xs font-black uppercase text-muted">
+            Capability stack
           </p>
-          <h2 className="mt-4 font-display text-5xl font-medium leading-tight tracking-[-0.05em] text-ink sm:text-6xl">
-            Focused stack, clear enough to scan.
+          <h2 className="mt-4 font-display text-5xl font-black uppercase leading-none tracking-normal text-ink sm:text-6xl">
+            Run a better learning system with data.
           </h2>
-          <p className="mt-4 text-body">
+          <p className="mt-5 max-w-2xl text-lg leading-8 text-body">
             Typed frontend, AI/data workflows, backend foundations, and
             deployment habits.
           </p>
         </Reveal>
 
-        <div className="mt-9 flex flex-wrap justify-center gap-3">
+        <div className="mt-9 flex flex-wrap gap-3">
           {filters.map((item) => (
             <button
               key={item}
               onClick={() => setFilter(item)}
               className={cn(
-                "rounded-lg px-4 py-2 text-sm font-medium capitalize text-muted transition",
+                "rounded-full border border-hairline px-4 py-2 text-sm font-bold capitalize text-muted transition",
                 filter === item
-                  ? "bg-surface-card text-ink"
-                  : "hover:bg-surface-card hover:text-ink",
+                  ? "bg-primary text-on-primary"
+                  : "bg-surface-card hover:border-primary hover:text-ink",
               )}
             >
               {item}
@@ -116,10 +116,13 @@ export function Skills() {
                 initial={{ opacity: 0, y: 18 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.035 }}
-                className={cn("rounded-feature p-6", theme.card)}
+                className={cn(
+                  "min-h-52 rounded-[22px] border border-hairline p-6",
+                  theme.card,
+                )}
               >
                 <Icon />
-                <h3 className="mt-7 text-lg font-semibold">
+                <h3 className="mt-7 text-lg font-black uppercase">
                   {skill.name}
                 </h3>
                 <p className={cn("mt-1 text-sm", theme.body)}>{skill.note}</p>

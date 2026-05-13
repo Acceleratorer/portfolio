@@ -23,7 +23,7 @@ export function DashboardCharts({ readinessData, projectPipeline }: DashboardCha
   return (
     <div className="mt-6 grid gap-5 lg:grid-cols-2">
       <article className="panel rounded-feature p-6">
-        <h2 className="text-2xl font-semibold tracking-[-0.03em]">
+        <h2 className="text-2xl font-black uppercase tracking-normal">
           Readiness radar
         </h2>
         <p className="mt-2 text-sm text-muted">
@@ -44,9 +44,9 @@ export function DashboardCharts({ readinessData, projectPipeline }: DashboardCha
               />
               <Tooltip
                 contentStyle={{
-                  background: "#fffaf0",
-                  border: "1px solid #e5e5e5",
-                  borderRadius: 16,
+                  background: "#fffffa",
+                  border: "1px solid #cacac2",
+                  borderRadius: 20,
                 }}
               />
             </RadarChart>
@@ -55,7 +55,7 @@ export function DashboardCharts({ readinessData, projectPipeline }: DashboardCha
       </article>
 
       <article className="panel rounded-feature p-6">
-        <h2 className="text-2xl font-semibold tracking-[-0.03em]">
+        <h2 className="text-2xl font-black uppercase tracking-normal">
           Project pipeline
         </h2>
         <p className="mt-2 text-sm text-muted">
@@ -74,9 +74,9 @@ export function DashboardCharts({ readinessData, projectPipeline }: DashboardCha
               <YAxis stroke="#6a6a6a" tickLine={false} axisLine={false} />
               <Tooltip
                 contentStyle={{
-                  background: "#fffaf0",
-                  border: "1px solid #e5e5e5",
-                  borderRadius: 16,
+                  background: "#fffffa",
+                  border: "1px solid #cacac2",
+                  borderRadius: 20,
                 }}
               />
               <Bar dataKey="count" fill="#b8a4ed" radius={[12, 12, 0, 0]} />

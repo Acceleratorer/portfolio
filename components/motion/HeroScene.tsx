@@ -7,53 +7,45 @@ const SPLINE_SCENE_URL =
 const stack = ["Python", "PyTorch", "Next.js", "MLOps"];
 
 const terminalLines = [
-  "load dataset",
-  "train model",
-  "evaluate signal",
-  "ship portfolio",
+  "prototype agent",
+  "train signal",
+  "deploy workflow",
+  "document proof",
 ];
 
 export default function HeroScene() {
   return (
-    <section className="relative isolate overflow-hidden bg-canvas px-5 pb-12 pt-28 text-ink md:pb-16 md:pt-28">
-      <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1.12fr_0.88fr]">
-        <div className="relative z-10 animate-float">
-          <div className="inline-flex items-center gap-3 rounded-full border border-hairline bg-surface-card px-4 py-2 text-sm font-semibold text-body">
-            <span className="h-2.5 w-2.5 rounded-full bg-brand-coral" />
-            AI Engineer / Data Scientist / Builder
+    <section className="relative isolate overflow-hidden bg-canvas px-5 pb-16 pt-28 text-ink md:pt-32">
+      <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[1fr_0.95fr]">
+        <div className="relative z-10">
+          <div className="inline-flex items-center gap-3 rounded-full border border-primary bg-surface-card px-4 py-2 text-xs font-black uppercase text-ink">
+            <span className="h-2.5 w-2.5 rounded-full bg-brand-mint" />
+            Accel.io.vn / AI command center
           </div>
 
-          <h1 className="mt-7 max-w-2xl font-display text-6xl font-medium leading-none tracking-[-0.055em] text-ink md:text-7xl lg:text-[72px]">
-            Tan Le
+          <h1 className="mt-7 max-w-3xl font-display text-6xl font-black uppercase leading-[0.9] tracking-normal text-ink md:text-7xl lg:text-[92px]">
+            AI systems for useful work
           </h1>
 
-          <p className="mt-5 max-w-2xl font-display text-3xl font-medium leading-tight tracking-[-0.045em] text-body-strong md:text-4xl">
-            Accelra portfolio for intelligent systems, data products, and
-            production-minded experiments.
+          <p className="mt-6 max-w-2xl text-lg font-medium leading-8 text-body-strong md:text-xl">
+            A hybrid portfolio and workbench for AI products, data workflows,
+            MLOps practice, and web systems that actually ship.
           </p>
 
-          <p className="mt-6 max-w-xl text-base leading-8 text-body md:text-lg">
-            I build across machine learning, analytics, full-stack interfaces,
-            and deployment workflows with a calm focus on useful shipped work.
-          </p>
-
-          <div className="mt-8 flex flex-wrap gap-3">
+          <div className="mt-9 flex flex-wrap gap-3">
             <a
-              href="#projects"
-              className="inline-flex h-11 items-center gap-2 rounded-xl bg-primary px-5 text-sm font-semibold text-on-primary transition active:bg-primary-active"
+              href="#work"
+              className="inline-flex h-12 items-center gap-2 rounded-full bg-primary px-6 text-sm font-bold text-on-primary transition active:bg-primary-active"
             >
-              View projects
+              Explore work
               <ArrowUpRight size={17} />
             </a>
 
             <a
-              href="https://github.com/Acceleratorer"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex h-11 items-center gap-2 rounded-xl border border-hairline bg-canvas px-5 text-sm font-semibold text-ink"
+              href="/about"
+              className="inline-flex h-12 items-center gap-2 rounded-full border border-primary bg-surface-card px-6 text-sm font-bold text-ink"
             >
-              <Github size={17} />
-              GitHub
+              <Github size={17} /> About Tan
             </a>
           </div>
 
@@ -61,7 +53,7 @@ export default function HeroScene() {
             {stack.map((item) => (
               <span
                 key={item}
-                className="rounded-full bg-surface-card px-3 py-1.5 text-sm font-medium text-body"
+                className="rounded-full bg-surface-card px-4 py-2 text-xs font-black uppercase text-body"
               >
                 {item}
               </span>
@@ -73,35 +65,35 @@ export default function HeroScene() {
           className="relative z-10"
           aria-label="Animated portfolio scene"
         >
-          <div className="overflow-hidden rounded-feature border border-hairline bg-surface-soft p-4 text-ink shadow-soft">
-            <div className="flex items-center gap-2 rounded-2xl bg-canvas px-4 py-3">
+          <div className="overflow-hidden rounded-[28px] border border-primary bg-surface-dark p-4 text-on-dark shadow-soft">
+            <div className="flex items-center gap-2 rounded-2xl bg-surface-dark-soft px-4 py-3">
               <span className="h-3 w-3 rounded-full bg-brand-coral" />
               <span className="h-3 w-3 rounded-full bg-brand-ochre" />
               <span className="h-3 w-3 rounded-full bg-brand-mint" />
-              <span className="ml-auto font-mono text-xs text-muted">
+              <span className="ml-auto font-mono text-xs text-on-dark-soft">
                 accel.io.vn
               </span>
             </div>
 
-            <div className="relative mt-4 min-h-[360px] overflow-hidden rounded-[20px] bg-canvas sm:min-h-[430px] lg:min-h-[450px]">
+            <div className="relative mt-4 min-h-[400px] overflow-hidden rounded-[20px] bg-black sm:min-h-[470px] lg:min-h-[500px]">
               <Spline
                 scene={SPLINE_SCENE_URL}
                 className="absolute inset-0 h-full w-full"
               />
 
-              <div className="pointer-events-none absolute inset-x-4 bottom-4 rounded-2xl border border-hairline bg-canvas/90 p-3 backdrop-blur sm:p-4">
-                <div className="mb-3 flex items-center gap-2 text-sm font-semibold text-ink">
+              <div className="pointer-events-none absolute inset-x-4 bottom-4 rounded-2xl border border-white/10 bg-surface-dark-elevated/90 p-3 backdrop-blur sm:p-4">
+                <div className="mb-3 flex items-center gap-2 text-sm font-bold text-on-dark">
                   <Sparkles size={16} className="text-brand-coral" />
                   Shipping loop
                 </div>
-                <div className="grid gap-2 font-mono text-xs text-body sm:grid-cols-4">
+                <div className="grid gap-2 font-mono text-xs text-on-dark-soft sm:grid-cols-4">
                   {terminalLines.map((line, index) => (
                     <span
                       key={line}
-                      className="animate-pulse rounded-xl bg-surface-card px-3 py-2 leading-tight"
+                      className="animate-pulse rounded-xl bg-white/[0.08] px-3 py-2 leading-tight"
                       style={{ animationDelay: `${index * 180}ms` }}
                     >
-                      <span className="text-brand-coral">$</span> {line}
+                      <span className="text-brand-teal">$</span> {line}
                     </span>
                   ))}
                 </div>

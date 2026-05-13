@@ -10,9 +10,9 @@ export default function HomePage() {
     <main>
       <HeroScene />
       <About />
-      <Skills />
-      <Projects />
       <DashboardPreview />
+      <Projects />
+      <Skills />
       <Contact />
     </main>
   );

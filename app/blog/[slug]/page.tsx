@@ -23,8 +23,8 @@ export default function BlogDetailPage({ params }: BlogDetailPageProps) {
           <ArrowLeft size={16} /> Back to blog
         </Link>
 
-        <p className="mt-10 text-xs font-semibold uppercase tracking-[0.16em] text-brand-coral">{post.date}</p>
-        <h1 className="mt-4 font-display text-5xl font-medium leading-none tracking-[-0.055em] sm:text-7xl">{post.title}</h1>
+        <p className="mt-10 text-xs font-black uppercase text-brand-coral">{post.date}</p>
+        <h1 className="mt-4 font-display text-5xl font-black uppercase leading-none tracking-normal sm:text-7xl">{post.title}</h1>
         <p className="mt-6 text-lg leading-8 text-body">{post.excerpt}</p>
 
         <div className="mdx-body mt-12 rounded-feature border border-hairline bg-surface-card p-7 sm:p-10">

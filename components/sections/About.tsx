@@ -1,52 +1,87 @@
 import { Reveal } from "@/components/motion/Reveal";
 
 const pills = [
-  "AI Engineer",
-  "Data Scientist",
-  "MLOps Learner",
-  "Competitive Programmer",
-  "GitHub Builder",
-  "Product-minded Dev",
+  "AI prototypes",
+  "Data workflows",
+  "MLOps habits",
+  "Dashboard UI",
+  "Automation tools",
+  "Case-study docs",
+];
+
+const promises = [
+  {
+    title: "AI.",
+    text: "Models, agents, and experiments framed around measurable usefulness.",
+  },
+  {
+    title: "DATA.",
+    text: "Pipelines, notebooks, analytics, and proof that can be inspected.",
+  },
+  {
+    title: "SHIPPED.",
+    text: "Interfaces, docs, deployment notes, and public project trails.",
+  },
 ];
 
 export function About() {
   return (
-    <section id="about" className="bg-surface-soft px-5 py-24">
-      <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[0.85fr_1.15fr]">
-        <Reveal>
-          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-brand-coral">
-            About
-          </p>
-          <h2 className="mt-4 font-display text-5xl font-medium leading-tight tracking-[-0.05em] text-ink sm:text-6xl">
-            Builder mindset, AI direction, engineering discipline.
-          </h2>
-        </Reveal>
+    <section
+      id="work"
+      className="rounded-t-[34px] bg-surface-dark px-5 py-20 text-on-dark md:py-24"
+    >
+      <div className="mx-auto max-w-7xl">
+        <div className="grid gap-5 md:grid-cols-3">
+          {promises.map((item) => (
+            <Reveal key={item.title}>
+              <article className="min-h-44 rounded-3xl border border-white/10 bg-white/[0.03] p-6">
+                <h2 className="font-display text-4xl font-black uppercase leading-none tracking-normal">
+                  {item.title}
+                </h2>
+                <p className="mt-5 max-w-sm text-sm leading-6 text-on-dark-soft">
+                  {item.text}
+                </p>
+              </article>
+            </Reveal>
+          ))}
+        </div>
 
-        <Reveal delay={0.08}>
-          <div className="text-lg leading-8 text-body">
-            <p>
-              I am a Computer Science student at UIT who learns by rebuilding
-              real systems: AI demos, data workflows, automation tools, backend
-              logic, and clean portfolio interfaces.
+        <div className="mt-20 grid gap-10 lg:grid-cols-[0.88fr_1.12fr] lg:items-start">
+          <Reveal>
+            <p className="text-xs font-black uppercase text-brand-mint">
+              Work system
             </p>
-            <p className="mt-5">
-              My strongest direction is AI and Data Science, while a full-stack
-              toolkit lets me ship projects end-to-end: model, backend, UI,
-              deployment, and documentation.
-            </p>
-          </div>
+            <h2 className="mt-4 max-w-2xl font-display text-5xl font-black uppercase leading-none tracking-normal sm:text-6xl">
+              We are turning learning into shipped proof.
+            </h2>
+          </Reveal>
 
-          <div className="mt-7 flex flex-wrap gap-3">
-            {pills.map((pill) => (
-              <span
-                key={pill}
-                className="rounded-full border border-hairline bg-canvas px-4 py-2 text-sm font-medium text-body-strong"
-              >
-                {pill}
-              </span>
-            ))}
-          </div>
-        </Reveal>
+          <Reveal delay={0.08}>
+            <div className="text-lg leading-8 text-on-dark-soft">
+              <p>
+                Accelra is the public surface for Tan Le&apos;s technical work:
+                AI demos, data products, automation, and Next.js interfaces
+                built with a portfolio-first habit.
+              </p>
+              <p className="mt-5">
+                The site behaves like a product website on the homepage, while
+                the personal portfolio details live in the dedicated About
+                route.
+              </p>
+            </div>
+
+            <div className="mt-7 flex flex-wrap gap-3">
+              {pills.map((pill) => (
+                <span
+                  key={pill}
+                  className="rounded-full border border-white/10 bg-white/[0.06] px-4 py-2 text-sm font-bold text-on-dark"
+                >
+                  {pill}
+                </span>
+              ))}
+            </div>
+          </Reveal>
+        </div>
       </div>
     </section>
   );

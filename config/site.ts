@@ -6,13 +6,14 @@ export const siteConfig = {
   title: "Tan Le - Accelra Technical Portfolio",
   description:
     "Computer Science Student at UIT building AI, Data, MLOps, and Web Systems.",
-  url: "https://accelra.dev",
+  url: "https://accel.io.vn",
   email: "noobtan77@gmail.com",
   location: "Ho Chi Minh City, Vietnam",
 };
 
 export const navItems: NavItem[] = [
   { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
   { label: "Dashboard", href: "/dashboard" },
   { label: "Projects", href: "/projects" },
   { label: "Blog", href: "/blog" },
