@@ -4,62 +4,76 @@
 
 :root {
   color-scheme: light;
-  --color-canvas: 250 249 245;
-  --color-surface-soft: 245 240 232;
-  --color-surface-card: 239 233 222;
-  --color-surface-cream-strong: 232 224 210;
-  --color-surface-dark: 24 23 21;
-  --color-surface-dark-elevated: 37 35 32;
-  --color-surface-dark-soft: 31 30 27;
-  --color-hairline: 230 223 216;
-  --color-hairline-soft: 235 230 223;
-  --color-primary: 204 120 92;
-  --color-primary-active: 169 88 62;
-  --color-primary-disabled: 230 223 216;
-  --color-accent-teal: 93 184 166;
-  --color-accent-amber: 232 165 90;
-  --color-ink: 20 20 19;
-  --color-body-strong: 37 37 35;
-  --color-body: 61 61 58;
-  --color-muted: 108 106 100;
-  --color-muted-soft: 142 139 130;
+  --color-canvas: 255 250 240;
+  --color-surface-soft: 250 245 232;
+  --color-surface-card: 245 240 224;
+  --color-surface-cream-strong: 235 230 214;
+  --color-surface-dark: 10 26 26;
+  --color-surface-dark-elevated: 26 42 42;
+  --color-surface-dark-soft: 20 34 34;
+  --color-hairline: 229 229 229;
+  --color-hairline-soft: 235 230 214;
+  --color-primary: 10 10 10;
+  --color-primary-active: 42 42 42;
+  --color-primary-disabled: 229 229 229;
+  --color-accent-teal: 164 212 197;
+  --color-accent-amber: 232 185 74;
+  --color-brand-pink: 255 77 139;
+  --color-brand-teal: 26 58 58;
+  --color-brand-lavender: 184 164 237;
+  --color-brand-peach: 255 176 132;
+  --color-brand-ochre: 232 185 74;
+  --color-brand-mint: 164 212 197;
+  --color-brand-coral: 255 107 90;
+  --color-ink: 10 10 10;
+  --color-body-strong: 26 26 26;
+  --color-body: 58 58 58;
+  --color-muted: 106 106 106;
+  --color-muted-soft: 154 154 154;
   --color-on-primary: 255 255 255;
-  --color-on-dark: 250 249 245;
-  --color-on-dark-soft: 160 157 150;
-  --color-success: 93 184 114;
-  --color-warning: 212 160 23;
-  --color-error: 198 69 69;
-  --color-panel: 239 233 222;
+  --color-on-dark: 255 255 255;
+  --color-on-dark-soft: 220 232 228;
+  --color-success: 34 197 94;
+  --color-warning: 245 158 11;
+  --color-error: 239 68 68;
+  --color-panel: 245 240 224;
 }
 
 .dark {
   color-scheme: dark;
-  --color-canvas: 24 23 21;
-  --color-surface-soft: 31 30 27;
-  --color-surface-card: 37 35 32;
-  --color-surface-cream-strong: 48 45 40;
-  --color-surface-dark: 15 14 13;
-  --color-surface-dark-elevated: 37 35 32;
-  --color-surface-dark-soft: 31 30 27;
-  --color-hairline: 58 54 49;
-  --color-hairline-soft: 48 45 40;
-  --color-primary: 216 128 97;
-  --color-primary-active: 190 102 73;
-  --color-primary-disabled: 58 54 49;
-  --color-accent-teal: 93 184 166;
-  --color-accent-amber: 232 165 90;
-  --color-ink: 250 249 245;
-  --color-body-strong: 239 233 222;
-  --color-body: 216 208 195;
-  --color-muted: 160 157 150;
-  --color-muted-soft: 127 122 114;
-  --color-on-primary: 255 255 255;
+  --color-canvas: 10 26 26;
+  --color-surface-soft: 15 35 35;
+  --color-surface-card: 26 42 42;
+  --color-surface-cream-strong: 35 54 54;
+  --color-surface-dark: 5 12 12;
+  --color-surface-dark-elevated: 20 34 34;
+  --color-surface-dark-soft: 15 29 29;
+  --color-hairline: 45 66 66;
+  --color-hairline-soft: 35 54 54;
+  --color-primary: 255 250 240;
+  --color-primary-active: 245 240 224;
+  --color-primary-disabled: 45 66 66;
+  --color-accent-teal: 164 212 197;
+  --color-accent-amber: 232 185 74;
+  --color-brand-pink: 255 77 139;
+  --color-brand-teal: 26 58 58;
+  --color-brand-lavender: 184 164 237;
+  --color-brand-peach: 255 176 132;
+  --color-brand-ochre: 232 185 74;
+  --color-brand-mint: 164 212 197;
+  --color-brand-coral: 255 107 90;
+  --color-ink: 255 250 240;
+  --color-body-strong: 245 240 224;
+  --color-body: 225 220 210;
+  --color-muted: 184 196 190;
+  --color-muted-soft: 139 156 150;
+  --color-on-primary: 10 10 10;
   --color-on-dark: 250 249 245;
-  --color-on-dark-soft: 160 157 150;
-  --color-success: 93 184 114;
-  --color-warning: 212 160 23;
-  --color-error: 198 69 69;
-  --color-panel: 37 35 32;
+  --color-on-dark-soft: 184 196 190;
+  --color-success: 34 197 94;
+  --color-warning: 245 158 11;
+  --color-error: 239 68 68;
+  --color-panel: 26 42 42;
 }
 
 * {
@@ -110,8 +124,8 @@ body {
   background: linear-gradient(
     135deg,
     rgb(var(--color-ink)),
-    rgb(var(--color-primary)) 56%,
-    rgb(var(--color-accent-teal))
+    rgb(var(--color-brand-pink)) 56%,
+    rgb(var(--color-brand-mint))
   );
   -webkit-background-clip: text;
   background-clip: text;
@@ -134,14 +148,15 @@ body {
 .mdx-body h2 {
   margin-top: 2.2rem;
   font-family:
-    Cormorant Garamond,
-    EB Garamond,
-    Garamond,
-    Times New Roman,
-    serif;
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    Segoe UI,
+    Roboto,
+    sans-serif;
   font-size: 1.7rem;
-  font-weight: 400;
-  letter-spacing: -0.02em;
+  font-weight: 500;
+  letter-spacing: -0.04em;
 }
 
 .mdx-body p {

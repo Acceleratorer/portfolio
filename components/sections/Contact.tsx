@@ -27,10 +27,10 @@ export function Contact() {
     <section id="contact" className="bg-canvas px-5 py-24">
       <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[0.9fr_1.1fr]">
         <Reveal>
-          <p className="text-xs font-medium uppercase tracking-[0.16em] text-primary">
+          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-brand-coral">
             Contact
           </p>
-          <h2 className="mt-4 font-display text-5xl font-normal leading-tight tracking-[-0.03em] text-ink sm:text-6xl">
+          <h2 className="mt-4 font-display text-5xl font-medium leading-tight tracking-[-0.05em] text-ink sm:text-6xl">
             Lets build something sharp.
           </h2>
           <p className="mt-5 text-lg leading-8 text-body">
@@ -39,7 +39,7 @@ export function Contact() {
           </p>
           <a
             href={`mailto:${siteConfig.email}`}
-            className="mt-7 inline-flex h-11 items-center gap-2 rounded-lg border border-hairline bg-canvas px-5 text-sm font-medium text-ink"
+            className="mt-7 inline-flex h-11 items-center gap-2 rounded-xl border border-hairline bg-canvas px-5 text-sm font-semibold text-ink"
           >
             <Mail size={18} /> {siteConfig.email}
           </a>
@@ -48,14 +48,14 @@ export function Contact() {
         <Reveal delay={0.08}>
           <form
             onSubmit={handleSubmit}
-            className="grid gap-4 rounded-card bg-surface-card p-6"
+            className="grid gap-4 rounded-feature bg-surface-card p-6"
           >
             <label className="grid gap-2 text-sm font-medium text-body">
               Name
               <input
                 name="name"
                 required
-                className="h-10 rounded-lg border border-hairline bg-canvas px-4 text-ink outline-none focus:border-primary focus:ring-4 focus:ring-primary/15"
+                className="h-11 rounded-xl border border-hairline bg-canvas px-4 text-ink outline-none focus:border-ink focus:ring-4 focus:ring-primary/10"
                 placeholder="Your name"
               />
             </label>
@@ -65,7 +65,7 @@ export function Contact() {
                 name="email"
                 type="email"
                 required
-                className="h-10 rounded-lg border border-hairline bg-canvas px-4 text-ink outline-none focus:border-primary focus:ring-4 focus:ring-primary/15"
+                className="h-11 rounded-xl border border-hairline bg-canvas px-4 text-ink outline-none focus:border-ink focus:ring-4 focus:ring-primary/10"
                 placeholder="your@email.com"
               />
             </label>
@@ -74,7 +74,7 @@ export function Contact() {
               <input
                 name="subject"
                 required
-                className="h-10 rounded-lg border border-hairline bg-canvas px-4 text-ink outline-none focus:border-primary focus:ring-4 focus:ring-primary/15"
+                className="h-11 rounded-xl border border-hairline bg-canvas px-4 text-ink outline-none focus:border-ink focus:ring-4 focus:ring-primary/10"
                 placeholder="Project / internship / collaboration"
               />
             </label>
@@ -84,15 +84,15 @@ export function Contact() {
                 name="message"
                 rows={5}
                 required
-                className="rounded-lg border border-hairline bg-canvas px-4 py-3 text-ink outline-none focus:border-primary focus:ring-4 focus:ring-primary/15"
+                className="rounded-xl border border-hairline bg-canvas px-4 py-3 text-ink outline-none focus:border-ink focus:ring-4 focus:ring-primary/10"
                 placeholder="Tell me what you want to build..."
               />
             </label>
-            <button className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg bg-primary px-6 text-sm font-medium text-on-primary transition active:bg-primary-active">
+            <button className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-primary px-6 text-sm font-semibold text-on-primary transition active:bg-primary-active">
               Open email draft <Send size={18} />
             </button>
             {sent && (
-              <p className="text-sm font-medium text-primary">
+              <p className="text-sm font-medium text-brand-coral">
                 Opening your email app...
               </p>
             )}

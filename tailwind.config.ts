@@ -28,6 +28,13 @@ const config: Config = {
         "primary-disabled": color("--color-primary-disabled"),
         "accent-teal": color("--color-accent-teal"),
         "accent-amber": color("--color-accent-amber"),
+        "brand-pink": color("--color-brand-pink"),
+        "brand-teal": color("--color-brand-teal"),
+        "brand-lavender": color("--color-brand-lavender"),
+        "brand-peach": color("--color-brand-peach"),
+        "brand-ochre": color("--color-brand-ochre"),
+        "brand-mint": color("--color-brand-mint"),
+        "brand-coral": color("--color-brand-coral"),
         ink: color("--color-ink"),
         "body-strong": color("--color-body-strong"),
         body: color("--color-body"),
@@ -46,11 +53,12 @@ const config: Config = {
       },
       fontFamily: {
         display: [
-          "Cormorant Garamond",
-          "EB Garamond",
-          "Garamond",
-          "Times New Roman",
-          "serif",
+          "Inter",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "Segoe UI",
+          "Roboto",
+          "sans-serif",
         ],
         sans: [
           "Inter",
@@ -68,7 +76,8 @@ const config: Config = {
         cyan: "0 1px 3px rgba(20, 20, 19, 0.08)",
       },
       borderRadius: {
-        card: "12px",
+        card: "16px",
+        feature: "24px",
       },
       keyframes: {
         marquee: {

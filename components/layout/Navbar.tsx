@@ -47,7 +47,7 @@ export function Navbar() {
             <Link
               key={item.href}
               href={item.href}
-              className="rounded-lg px-3 py-2 text-sm font-medium text-muted transition hover:bg-surface-card hover:text-ink"
+              className="rounded-xl px-3 py-2 text-sm font-medium text-muted transition hover:bg-surface-card hover:text-ink"
             >
               {item.label}
             </Link>
@@ -57,7 +57,7 @@ export function Navbar() {
         <div className="hidden items-center gap-3 md:flex">
           <Link
             href="/cv/Tan-Le-CV.txt"
-            className="rounded-lg px-3 py-2 text-sm font-medium text-ink"
+            className="rounded-xl px-3 py-2 text-sm font-medium text-ink"
           >
             Resume
           </Link>
@@ -66,7 +66,7 @@ export function Navbar() {
 
           <Link
             href="/#contact"
-            className="inline-flex h-10 items-center rounded-lg bg-primary px-5 text-sm font-medium text-on-primary transition active:bg-primary-active"
+            className="inline-flex h-11 items-center rounded-xl bg-primary px-5 text-sm font-semibold text-on-primary transition active:bg-primary-active"
           >
             Hire me
           </Link>
@@ -91,13 +91,13 @@ export function Navbar() {
                 key={item.href}
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className="rounded-lg px-4 py-3 text-sm font-medium text-body hover:bg-surface-card"
+                className="rounded-xl px-4 py-3 text-sm font-medium text-body hover:bg-surface-card"
               >
                 {item.label}
               </Link>
             ))}
 
-            <div className="flex items-center justify-between gap-3 rounded-lg px-4 py-2">
+            <div className="flex items-center justify-between gap-3 rounded-xl px-4 py-2">
               <Link
                 href="/cv/Tan-Le-CV.txt"
                 onClick={() => setOpen(false)}
@@ -111,7 +111,7 @@ export function Navbar() {
             <Link
               href="/#contact"
               onClick={() => setOpen(false)}
-              className="rounded-lg bg-primary px-4 py-3 text-center text-sm font-medium text-on-primary"
+              className="rounded-xl bg-primary px-4 py-3 text-center text-sm font-semibold text-on-primary"
             >
               Hire me
             </Link>

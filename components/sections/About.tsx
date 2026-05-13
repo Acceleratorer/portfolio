@@ -14,10 +14,10 @@ export function About() {
     <section id="about" className="bg-surface-soft px-5 py-24">
       <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[0.85fr_1.15fr]">
         <Reveal>
-          <p className="text-xs font-medium uppercase tracking-[0.16em] text-primary">
+          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-brand-coral">
             About
           </p>
-          <h2 className="mt-4 font-display text-5xl font-normal leading-tight tracking-[-0.03em] text-ink sm:text-6xl">
+          <h2 className="mt-4 font-display text-5xl font-medium leading-tight tracking-[-0.05em] text-ink sm:text-6xl">
             Builder mindset, AI direction, engineering discipline.
           </h2>
         </Reveal>

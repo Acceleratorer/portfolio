@@ -5,10 +5,10 @@ import { siteConfig, socialLinks } from "@/config/site";
 
 export function Footer() {
   return (
-    <footer className="bg-surface-dark py-14 text-on-dark-soft">
+    <footer className="bg-surface-soft py-20 text-body">
       <div className="mx-auto grid max-w-6xl gap-8 px-5 md:grid-cols-[1fr_auto] md:items-start">
         <div>
-          <div className="flex items-center gap-3 text-on-dark">
+          <div className="flex items-center gap-3 text-ink">
             <span className="grid h-7 w-7 place-items-center overflow-hidden rounded-full bg-canvas">
               <Image
                 src="/icons/logo.png"
@@ -37,7 +37,7 @@ export function Footer() {
               key={link.href}
               href={link.href}
               target="_blank"
-              className="inline-flex items-center gap-2 rounded-lg bg-surface-dark-elevated px-4 py-2 text-sm font-medium text-on-dark"
+              className="inline-flex items-center gap-2 rounded-xl bg-surface-card px-4 py-2 text-sm font-semibold text-ink"
             >
               {link.label} <ArrowUpRight size={14} />
             </Link>
