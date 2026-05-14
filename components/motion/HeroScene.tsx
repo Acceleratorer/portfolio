@@ -1,8 +1,14 @@
-import Spline from "@splinetool/react-spline/next";
+"use client";
+
+import dynamic from "next/dynamic";
 import { ArrowUpRight, Github, Radio, Sparkles } from "lucide-react";
 
-const SPLINE_SCENE_URL =
-  "https://prod.spline.design/Sh68HSNWpAT8yudq/scene.splinecode";
+const HeroOrbitScene = dynamic(() => import("@/components/three/HeroOrbitScene"), {
+  ssr: false,
+  loading: () => (
+    <div className="h-full w-full animate-pulse bg-[radial-gradient(circle_at_50%_45%,rgba(114,247,178,0.18),rgba(0,0,0,0)_48%)]" />
+  ),
+});
 
 const stack = ["Python", "PyTorch", "Next.js", "MLOps", "Docker", "GitHub"];
 
@@ -93,10 +99,7 @@ export default function HeroScene() {
 
               <div className="relative mt-3 h-[390px] overflow-hidden rounded-[22px] border border-white/10 bg-black shadow-[inset_0_-90px_120px_rgba(114,247,178,0.10)] sm:h-[460px]">
                 <div className="absolute inset-0 overflow-hidden rounded-[20px]">
-                  <Spline
-                    scene={SPLINE_SCENE_URL}
-                    className="absolute inset-0 h-full w-full"
-                  />
+                  <HeroOrbitScene />
                 </div>
                 <div className="pointer-events-none absolute inset-0 rounded-[22px] ring-1 ring-white/10" />
               </div>
