@@ -337,50 +337,90 @@ export function SearchLayers() {
 
 export function DataBuilding() {
   return (
-    <div className="pointer-events-none absolute bottom-[-6px] right-[-18px] h-[250px] w-full overflow-hidden">
+    <div className="pointer-events-none absolute bottom-[-4px] right-[-8px] h-[250px] w-full overflow-hidden">
       <svg viewBox="0 0 520 260" className="h-full w-full">
+        <defs>
+          <clipPath id="dataBuildingLeftFace">
+            <polygon points="174,88 286,150 286,246 174,184" />
+          </clipPath>
+          <clipPath id="dataBuildingRightFace">
+            <polygon points="286,150 420,78 420,176 286,246" />
+          </clipPath>
+        </defs>
+
         <motion.g
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: [0, -8, 0] }}
           transition={{ duration: 4.4, ...loop }}
         >
           <polygon
-            points="192,76 320,8 448,76 320,144"
+            points="174,88 300,20 420,78 286,150"
             fill="rgb(var(--color-brand-teal))"
             fillOpacity="0.18"
             stroke="rgb(var(--color-brand-teal))"
+            strokeWidth="1.4"
           />
           <polygon
-            points="192,76 320,144 320,252 192,184"
+            points="174,88 286,150 286,246 174,184"
             fill="rgb(var(--color-brand-teal))"
             fillOpacity="0.22"
             stroke="rgb(var(--color-brand-teal))"
+            strokeWidth="1.4"
           />
           <polygon
-            points="448,76 320,144 320,252 448,184"
+            points="286,150 420,78 420,176 286,246"
             fill="rgb(var(--color-surface-dark-elevated))"
             stroke="rgb(var(--color-brand-teal))"
+            strokeWidth="1.4"
           />
-          {Array.from({ length: 30 }).map((_, index) => {
-            const x = 212 + (index % 5) * 20;
-            const y = 98 + Math.floor(index / 5) * 22;
-            return (
-              <motion.rect
-                key={index}
-                x={x}
-                y={y}
-                width="14"
-                height="16"
-                fill="rgb(var(--color-brand-teal))"
-                opacity={index % 4 === 0 ? 0.95 : 0.42}
-                animate={{ opacity: index % 4 === 0 ? [0.55, 1, 0.55] : [0.28, 0.66, 0.28] }}
-                transition={{ duration: 2.6, delay: index * 0.04, ...loop }}
-              />
-            );
-          })}
+
+          <g clipPath="url(#dataBuildingLeftFace)">
+            {Array.from({ length: 36 }).map((_, index) => {
+              const col = index % 6;
+              const row = Math.floor(index / 6);
+              const x = 194 + col * 15 + row * 1.8;
+              const y = 116 + row * 17 + col * 8.5;
+              return (
+                <motion.rect
+                  key={index}
+                  x={x}
+                  y={y}
+                  width="10"
+                  height="12"
+                  fill="rgb(var(--color-brand-teal))"
+                  opacity={index % 5 === 0 ? 0.96 : 0.46}
+                  animate={{
+                    opacity:
+                      index % 5 === 0 ? [0.46, 1, 0.46] : [0.24, 0.64, 0.24],
+                  }}
+                  transition={{ duration: 2.6, delay: index * 0.035, ...loop }}
+                />
+              );
+            })}
+          </g>
+
+          <g clipPath="url(#dataBuildingRightFace)" opacity="0.22">
+            {Array.from({ length: 18 }).map((_, index) => {
+              const col = index % 3;
+              const row = Math.floor(index / 3);
+              return (
+                <motion.rect
+                  key={index}
+                  x={315 + col * 24 - row * 2.5}
+                  y={120 + row * 18 - col * 11}
+                  width="14"
+                  height="11"
+                  fill="rgb(var(--color-brand-teal))"
+                  animate={{ opacity: [0.18, 0.52, 0.18] }}
+                  transition={{ duration: 3.2, delay: index * 0.06, ...loop }}
+                />
+              );
+            })}
+          </g>
+
         </motion.g>
 
-        {[104, 456, 392].map((x, index) => (
+        {[94, 446, 386].map((x, index) => (
           <motion.rect
             key={x}
             x={x}
