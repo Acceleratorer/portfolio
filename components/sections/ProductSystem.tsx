@@ -8,6 +8,7 @@ import {
   Search,
   Waypoints,
 } from "lucide-react";
+import type { CSSProperties } from "react";
 import { Reveal } from "@/components/motion/Reveal";
 
 const productCards = [
@@ -90,15 +91,16 @@ const codeLines = [
 function CardVisual({ type }: { type: string }) {
   if (type === "cubes") {
     return (
-      <div className="absolute bottom-5 right-5 h-44 w-72 opacity-90">
+      <div className="redis-visual absolute bottom-5 right-5 h-44 w-72 opacity-90">
         {[0, 1, 2, 3, 4].map((item) => (
           <span
             key={item}
-            className="absolute h-24 w-24 border border-brand-ochre/70 bg-brand-ochre/25"
+            className="redis-cube absolute h-24 w-24 border border-brand-ochre/70 bg-brand-ochre/25"
             style={{
               left: `${item * 48}px`,
               top: `${Math.abs(2 - item) * 30}px`,
               transform: "skewY(-30deg) rotate(30deg)",
+              animationDelay: `${item * 160}ms`,
             }}
           />
         ))}
@@ -108,13 +110,16 @@ function CardVisual({ type }: { type: string }) {
 
   if (type === "lanes") {
     return (
-      <div className="absolute bottom-7 right-[-32px] grid w-80 gap-4 rotate-[30deg]">
+      <div className="redis-visual-slow absolute bottom-7 right-[-32px] grid w-80 rotate-[30deg] gap-4">
         {["bg-brand-lavender", "bg-surface-dark-elevated", "bg-brand-lavender/70"].map(
           (color, index) => (
             <span
               key={color}
-              className={`h-12 rounded-full border border-white/20 ${color}`}
-              style={{ marginLeft: `${index * 44}px` }}
+              className={`redis-lane h-12 rounded-full border border-white/20 ${color}`}
+              style={{
+                marginLeft: `${index * 44}px`,
+                animationDelay: `${index * 220}ms`,
+              }}
             />
           ),
         )}
@@ -124,11 +129,12 @@ function CardVisual({ type }: { type: string }) {
 
   if (type === "panels") {
     return (
-      <div className="absolute bottom-6 right-4 grid grid-cols-2 gap-5">
+      <div className="redis-visual absolute bottom-6 right-4 grid grid-cols-2 gap-5">
         {[0, 1, 2].map((item) => (
           <span
             key={item}
-            className="h-24 w-28 rounded-sm border border-brand-teal bg-brand-teal/20 shadow-[12px_12px_0_rgba(99,216,255,0.12)]"
+            className="redis-cube h-24 w-28 rounded-sm border border-brand-teal bg-brand-teal/20 shadow-[12px_12px_0_rgba(99,216,255,0.12)]"
+            style={{ animationDelay: `${item * 260}ms` }}
           />
         ))}
       </div>
@@ -137,13 +143,14 @@ function CardVisual({ type }: { type: string }) {
 
   if (type === "pyramid") {
     return (
-      <div className="absolute bottom-0 left-6 right-6 grid gap-2">
+      <div className="redis-visual-slow absolute bottom-0 left-6 right-6 grid gap-2">
         {[5, 4, 3, 2].map((count) => (
           <div key={count} className="mx-auto flex gap-2">
             {Array.from({ length: count }).map((_, index) => (
               <span
                 key={index}
-                className="h-9 w-9 border border-brand-mint bg-brand-mint/40"
+                className="redis-cube h-9 w-9 border border-brand-mint bg-brand-mint/40"
+                style={{ animationDelay: `${(count + index) * 90}ms` }}
               />
             ))}
           </div>
@@ -154,22 +161,23 @@ function CardVisual({ type }: { type: string }) {
 
   if (type === "search") {
     return (
-      <div className="absolute bottom-4 left-8 right-8 h-44">
+      <div className="redis-visual absolute bottom-4 left-8 right-8 h-44">
         <div className="absolute inset-x-10 top-8 h-24 rotate-45 border border-brand-coral" />
         <div className="absolute inset-x-16 top-16 h-20 rotate-45 border border-brand-coral/70" />
-        <div className="absolute bottom-2 left-16 h-16 w-16 rounded-full border border-brand-coral bg-brand-coral/25" />
+        <div className="redis-orbit absolute bottom-2 left-16 h-16 w-16 rounded-full border border-brand-coral bg-brand-coral/25" />
       </div>
     );
   }
 
   if (type === "building") {
     return (
-      <div className="absolute bottom-0 right-8 h-48 w-44 border border-brand-teal bg-brand-teal/15">
+      <div className="redis-visual-slow absolute bottom-0 right-8 h-48 w-44 border border-brand-teal bg-brand-teal/15">
         <div className="grid grid-cols-5 gap-1 p-4">
           {Array.from({ length: 35 }).map((_, index) => (
             <span
               key={index}
-              className={`h-4 ${index % 4 === 0 ? "bg-brand-teal" : "bg-brand-teal/30"}`}
+              className={`redis-cube h-4 ${index % 4 === 0 ? "bg-brand-teal" : "bg-brand-teal/30"}`}
+              style={{ animationDelay: `${index * 35}ms` }}
             />
           ))}
         </div>
@@ -178,12 +186,16 @@ function CardVisual({ type }: { type: string }) {
   }
 
   return (
-    <div className="absolute bottom-0 left-8 right-8 flex items-end justify-center gap-3">
+    <div className="redis-visual absolute bottom-0 left-8 right-8 flex items-end justify-center gap-3">
       {[72, 112, 148, 92, 126].map((height, index) => (
         <span
           key={height}
-          className="w-14 border border-brand-lavender bg-brand-lavender/55"
-          style={{ height, opacity: 0.65 + index * 0.05 }}
+          className="redis-rise w-14 border border-brand-lavender bg-brand-lavender/55"
+          style={{
+            height,
+            opacity: 0.65 + index * 0.05,
+            animationDelay: `${index * 180}ms`,
+          }}
         />
       ))}
     </div>
@@ -214,7 +226,13 @@ export function ProductSystem() {
                   className={card.className}
                 >
                   <article
-                    className="relative min-h-[360px] overflow-hidden rounded-xl border border-white/10 bg-surface-card p-6"
+                    className="redis-card group relative min-h-[360px] overflow-hidden rounded-xl border border-white/10 bg-surface-card p-6"
+                    style={
+                      {
+                        "--x": `${28 + (index % 3) * 22}%`,
+                        "--y": `${38 + (index % 2) * 24}%`,
+                      } as CSSProperties
+                    }
                   >
                     <div className="relative z-10">
                       <div className="flex items-center gap-3">
@@ -263,8 +281,12 @@ export function ProductSystem() {
 
           <Reveal delay={0.08}>
             <div className="grid grid-cols-3 gap-x-10 gap-y-9 text-center text-2xl font-semibold text-muted md:grid-cols-5">
-              {integrations.map((item) => (
-                <span key={item} className="opacity-75">
+              {integrations.map((item, index) => (
+                <span
+                  key={item}
+                  className="redis-tech-token opacity-75"
+                  style={{ animationDelay: `${index * 90}ms` }}
+                >
                   {item}
                 </span>
               ))}
@@ -302,7 +324,11 @@ export function ProductSystem() {
               <pre className="overflow-x-auto p-5 font-mono text-sm leading-7 text-body">
                 <code>
                   {codeLines.map(([a, b, c, d], index) => (
-                    <span key={`${a}-${index}`} className="block">
+                    <span
+                      key={`${a}-${index}`}
+                      className="redis-code-line block"
+                      style={{ animationDelay: `${index * 80}ms` }}
+                    >
                       <span className="text-brand-mint">{a}</span>
                       <span className="text-on-dark">{b}</span>
                       <span className="text-brand-coral">{c}</span>
