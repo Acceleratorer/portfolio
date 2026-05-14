@@ -8,8 +8,16 @@ import {
   Search,
   Waypoints,
 } from "lucide-react";
-import type { CSSProperties } from "react";
 import { Reveal } from "@/components/motion/Reveal";
+import {
+  CachingPanels,
+  DataBuilding,
+  FlexPyramid,
+  InsightBlocks,
+  IsometricBlocks,
+  LangCacheStreams,
+  SearchLayers,
+} from "@/components/visuals/AnimatedBlocks";
 
 const productCards = [
   {
@@ -90,116 +98,30 @@ const codeLines = [
 
 function CardVisual({ type }: { type: string }) {
   if (type === "cubes") {
-    return (
-      <div className="redis-visual absolute bottom-5 right-5 h-44 w-72 opacity-90">
-        {[0, 1, 2, 3, 4].map((item) => (
-          <span
-            key={item}
-            className="redis-cube absolute h-24 w-24 border border-brand-ochre/70 bg-brand-ochre/25"
-            style={{
-              left: `${item * 48}px`,
-              top: `${Math.abs(2 - item) * 30}px`,
-              transform: "skewY(-30deg) rotate(30deg)",
-              animationDelay: `${item * 160}ms`,
-            }}
-          />
-        ))}
-      </div>
-    );
+    return <IsometricBlocks />;
   }
 
   if (type === "lanes") {
-    return (
-      <div className="redis-visual-slow absolute bottom-7 right-[-32px] grid w-80 rotate-[30deg] gap-4">
-        {["bg-brand-lavender", "bg-surface-dark-elevated", "bg-brand-lavender/70"].map(
-          (color, index) => (
-            <span
-              key={color}
-              className={`redis-lane h-12 rounded-full border border-white/20 ${color}`}
-              style={{
-                marginLeft: `${index * 44}px`,
-                animationDelay: `${index * 220}ms`,
-              }}
-            />
-          ),
-        )}
-      </div>
-    );
+    return <LangCacheStreams />;
   }
 
   if (type === "panels") {
-    return (
-      <div className="redis-visual absolute bottom-6 right-4 grid grid-cols-2 gap-5">
-        {[0, 1, 2].map((item) => (
-          <span
-            key={item}
-            className="redis-cube h-24 w-28 rounded-sm border border-brand-teal bg-brand-teal/20 shadow-[12px_12px_0_rgba(99,216,255,0.12)]"
-            style={{ animationDelay: `${item * 260}ms` }}
-          />
-        ))}
-      </div>
-    );
+    return <CachingPanels />;
   }
 
   if (type === "pyramid") {
-    return (
-      <div className="redis-visual-slow absolute bottom-0 left-6 right-6 grid gap-2">
-        {[5, 4, 3, 2].map((count) => (
-          <div key={count} className="mx-auto flex gap-2">
-            {Array.from({ length: count }).map((_, index) => (
-              <span
-                key={index}
-                className="redis-cube h-9 w-9 border border-brand-mint bg-brand-mint/40"
-                style={{ animationDelay: `${(count + index) * 90}ms` }}
-              />
-            ))}
-          </div>
-        ))}
-      </div>
-    );
+    return <FlexPyramid />;
   }
 
   if (type === "search") {
-    return (
-      <div className="redis-visual absolute bottom-4 left-8 right-8 h-44">
-        <div className="absolute inset-x-10 top-8 h-24 rotate-45 border border-brand-coral" />
-        <div className="absolute inset-x-16 top-16 h-20 rotate-45 border border-brand-coral/70" />
-        <div className="redis-orbit absolute bottom-2 left-16 h-16 w-16 rounded-full border border-brand-coral bg-brand-coral/25" />
-      </div>
-    );
+    return <SearchLayers />;
   }
 
   if (type === "building") {
-    return (
-      <div className="redis-visual-slow absolute bottom-0 right-8 h-48 w-44 border border-brand-teal bg-brand-teal/15">
-        <div className="grid grid-cols-5 gap-1 p-4">
-          {Array.from({ length: 35 }).map((_, index) => (
-            <span
-              key={index}
-              className={`redis-cube h-4 ${index % 4 === 0 ? "bg-brand-teal" : "bg-brand-teal/30"}`}
-              style={{ animationDelay: `${index * 35}ms` }}
-            />
-          ))}
-        </div>
-      </div>
-    );
+    return <DataBuilding />;
   }
 
-  return (
-    <div className="redis-visual absolute bottom-0 left-8 right-8 flex items-end justify-center gap-3">
-      {[72, 112, 148, 92, 126].map((height, index) => (
-        <span
-          key={height}
-          className="redis-rise w-14 border border-brand-lavender bg-brand-lavender/55"
-          style={{
-            height,
-            opacity: 0.65 + index * 0.05,
-            animationDelay: `${index * 180}ms`,
-          }}
-        />
-      ))}
-    </div>
-  );
+  return <InsightBlocks />;
 }
 
 export function ProductSystem() {
@@ -226,13 +148,7 @@ export function ProductSystem() {
                   className={card.className}
                 >
                   <article
-                    className="redis-card group relative min-h-[360px] overflow-hidden rounded-xl border border-white/10 bg-surface-card p-6"
-                    style={
-                      {
-                        "--x": `${28 + (index % 3) * 22}%`,
-                        "--y": `${38 + (index % 2) * 24}%`,
-                      } as CSSProperties
-                    }
+                    className="redis-card group relative min-h-[360px] overflow-hidden rounded-xl border border-white/10 bg-surface-dark-elevated p-6"
                   >
                     <div className="relative z-10">
                       <div className="flex items-center gap-3">
@@ -241,11 +157,11 @@ export function ProductSystem() {
                           {card.title}
                         </h3>
                       </div>
-                      <p className="mt-6 max-w-sm text-sm leading-6 text-muted">
+                      <p className="mt-6 max-w-sm text-sm leading-6 text-on-dark-soft/70">
                         {card.text}
                       </p>
                       {card.bullets && (
-                        <ul className="mt-28 grid gap-2 text-sm text-muted md:mt-32">
+                        <ul className="mt-28 grid gap-2 text-sm text-on-dark-soft/70 md:mt-32">
                           {card.bullets.map((item) => (
                             <li key={item} className="flex items-center gap-2">
                               <Check size={15} className="text-on-dark" />

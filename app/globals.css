@@ -251,7 +251,7 @@ body {
   inset: 0;
   opacity: 0;
   background: radial-gradient(
-    circle at var(--x, 50%) var(--y, 50%),
+    circle at 74% 72%,
     rgb(var(--color-brand-mint) / 0.13),
     transparent 34%
   );
@@ -261,38 +261,12 @@ body {
 
 .redis-card:hover {
   border-color: rgb(var(--color-hairline-soft) / 0.95);
-  background-color: rgb(var(--color-surface-card) / 0.92);
+  background-color: rgb(var(--color-surface-dark-elevated) / 0.94);
   transform: translateY(-3px);
 }
 
 .redis-card:hover::before {
   opacity: 1;
-}
-
-.redis-visual {
-  animation: redisFloat 7s ease-in-out infinite;
-  will-change: transform;
-}
-
-.redis-visual-slow {
-  animation: redisFloat 9s ease-in-out infinite;
-}
-
-.redis-lane {
-  animation: redisSlide 6s ease-in-out infinite;
-}
-
-.redis-cube {
-  animation: redisPulse 3.8s ease-in-out infinite;
-}
-
-.redis-orbit {
-  animation: redisOrbit 10s linear infinite;
-  transform-origin: center;
-}
-
-.redis-rise {
-  animation: redisRise 5.5s ease-in-out infinite;
 }
 
 .redis-tech-token {
@@ -322,57 +296,6 @@ body {
   }
 }
 
-@keyframes redisFloat {
-  0%,
-  100% {
-    transform: translate3d(0, 0, 0);
-  }
-  50% {
-    transform: translate3d(0, -12px, 0);
-  }
-}
-
-@keyframes redisSlide {
-  0%,
-  100% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(18px);
-  }
-}
-
-@keyframes redisPulse {
-  0%,
-  100% {
-    opacity: 0.62;
-    transform: scale(0.96);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1.04);
-  }
-}
-
-@keyframes redisOrbit {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes redisRise {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-18px);
-  }
-}
-
 @keyframes redisToken {
   0%,
   100% {
@@ -399,12 +322,6 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .equalizer-bar,
   .scanline::after,
-  .redis-visual,
-  .redis-visual-slow,
-  .redis-lane,
-  .redis-cube,
-  .redis-orbit,
-  .redis-rise,
   .redis-tech-token,
   .redis-code-line {
     animation: none;
